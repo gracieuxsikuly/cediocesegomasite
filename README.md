@@ -1,61 +1,106 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🌐 Site Web – Croisade Eucharistique – Diocèse de Goma
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 📖 Description
+Ce projet est un site web développé en **Laravel** et **Livewire** pour le mouvement **Croisade Eucharistique** au sein du Diocèse de Goma.  
+Il a pour but de moderniser la coordination, la communication et la formation des membres du mouvement (enfants, animateurs, responsables, aumôniers).
 
-## About Laravel
+Le site se veut à la fois :
+- Un **annuaire numérique** (doyennés, paroisses, membres).
+- Un **média d’information** (actualités, activités, témoignages).
+- Un **outil spirituel** (prières, hymnes, catéchèse en ligne).
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🎯 Objectifs
+- Améliorer la visibilité et la coordination du mouvement.
+- Mettre en place une **base de données numérique** des membres.
+- Proposer un **calendrier liturgique et des programmes d’activités**.
+- Partager des **ressources spirituelles** (prières, chants, documents).
+- Favoriser la **communication entre les paroisses et les doyennés**.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 🖼️ Structure du Site
+- **Page d’accueil** : présentation, devise, actualités, carte du diocèse.
+- **Doyennés** : liste + localisation sur carte interactive.
+- **Paroisses** : annuaire des paroisses croisadières.
+- **Membres** : formulaire d’inscription en ligne + base sécurisée.
+- **Activités & Programmes** : calendrier liturgique, événements, rapports.
+- **Ressources spirituelles** : prières, hymnes, catéchèse, documents.
+- **À propos** : historique, organigramme, contacts.
+- **Contact** : formulaire + coordonnées diocésaines.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+---
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## 🛠️ Technologies Utilisées
+- **Laravel 12**
+- **Livewire 3**
+- **Bootstrap 5** (ou TailwindCSS)
+- **JavaScript (Vanilla ou Alpine.js)**  
+- **MySQL** pour la base des membres
+- **Google Maps / OpenStreetMap** (cartographie interactive)
+- **Git & GitHub** pour le versionnement
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 🚀 Installation & Lancement
+1. **Cloner le projet**
+   ```bash
+   git clone https://github.com/ton-compte/croisade-eucharistique-goma.git
+   cd croisade-eucharistique-goma
+   ```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+2. **Installer les dépendances PHP et JS**
+   ```bash
+   composer install
+   npm install && npm run dev
+   ```
 
-### Premium Partners
+3. **Configurer l’environnement**
+   - Copier `.env.example` en `.env`
+   - Modifier les paramètres de la base de données
+   - Générer la clé Laravel :
+     ```bash
+     php artisan key:generate
+     ```
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+4. **Migrer la base de données**
+   ```bash
+   php artisan migrate --seed
+   ```
 
-## Contributing
+5. **Lancer le serveur**
+   ```bash
+   php artisan serve
+   ```
+   Accéder au site via `http://127.0.0.1:8000`
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## 📅 Roadmap
+- [x] Création de la maquette textuelle.
+- [ ] Développement du template de base (Laravel + Livewire).
+- [ ] Intégration carte interactive des doyennés et paroisses.
+- [ ] Mise en place du formulaire d’inscription.
+- [ ] Déploiement sur un hébergeur (par ex. Hostinger, OVH, Forge).
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
+## ✍️ Auteur
+**Gracieux Sikuly Apostolat Croisé et Vis Zelateur Diocesain**  
+Ingénieur informaticien avec plus de 5 ans d’expérience en conception et développement de solutions IT.  
+Spécialisé en : Laravel, Livewire, gestion de bases de données, sécurité réseau, cloud (AWS), collecte et analyse de données humanitaires (KoboCollect, ODK, Power BI).  
 
-## Security Vulnerabilities
+🌍 Basé en Goma, RDC  
+📧 Email : [graciersikuly@gmail.com]  
+💼 LinkedIn : [https://www.linkedin.com/in/gracieux-sikuly-4aba2118b/]  
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 👥 Contributeurs
+- **Coordination diocésaine de la Croisade Eucharistique – Goma**
+- **Équipe technique diocesaine (développeurs, cartographes, communicateurs)**
+- Contributions bienvenues via **pull requests**.
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 📜 Licence
+Projet à usage **diocésain et communautaire**.  
+La reproduction ou l’utilisation à des fins commerciales est interdite sans autorisation préalable de la coordination diocésaine.
