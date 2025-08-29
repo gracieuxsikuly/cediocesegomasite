@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('email')->primary();
             $table->string('token');
             $table->timestamp('created_at')->nullable();
+            //okays
         });
 
         Schema::create('sessions', function (Blueprint $table) {
