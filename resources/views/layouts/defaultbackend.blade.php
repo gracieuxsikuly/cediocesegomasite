@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>CAAH ASBL | Conseil d’Alerte et Actions Humanitaires</title>
+       <title>Croisade Eucharistique | Mouvement spirituel des enfants et jeunes</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Le Conseil d’Alerte et Actions Humanitaires (CAAH ASBL) est une organisation nationale intervenant dans les domaines multisectoriels : sécurité alimentaire, santé et nutrition, VBG, protection, WASH, développement et progrès culturel. Siège social : Rutshuru, bureau provisoire : Kiwanja, quartier Buturande.">
-        <meta name="author" content="gracieux sikuly" />
-        <meta name="keywords" content="CAAH, Conseil d’Alerte et Actions Humanitaires, ONG, ASBL, Humanitaire, Sécurité alimentaire, Santé, Nutrition, Protection, VBG, WASH, Développement, Culture, Rutshuru, Kiwanja" />
+        <meta name="description" content="La Croisade Eucharistique est un mouvement spirituel catholique pour enfants, adolescents, jeunes et adulte, visant à les éduquer dans la foi, la prière, le service, le partage et l’amour de l’Eucharistie. Présente dans plusieurs paroisses et écoles, elle forme des apôtres au service de l’Église et de la société.">
+        <meta name="author" content="Croisade Eucharistique, gracieux sikuly" />
+        <meta name="keywords" content="Croisade Eucharistique, Mouvement catholique, Eucharistie, Enfants, Jeunes, Foi, Prière, Service, Partage, Amour, Église, Mouvement spirituel, Adoration" />
         <meta name="robots" content="index, follow">
+
         <!-- App favicon -->
         <link rel="shortcut icon" href="{{asset('assets_backend/images/favicon.ico')}}">
         <!-- Bootstrap Css -->

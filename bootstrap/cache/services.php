@@ -34,10 +34,9 @@
     30 => 'Carbon\\Laravel\\ServiceProvider',
     31 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
     32 => 'Termwind\\Laravel\\TermwindServiceProvider',
-    33 => 'Phiki\\Adapters\\Laravel\\PhikiServiceProvider',
-    34 => 'App\\Providers\\AppServiceProvider',
-    35 => 'App\\Providers\\FortifyServiceProvider',
-    36 => 'App\\Providers\\JetstreamServiceProvider',
+    33 => 'App\\Providers\\AppServiceProvider',
+    34 => 'App\\Providers\\FortifyServiceProvider',
+    35 => 'App\\Providers\\JetstreamServiceProvider',
   ),
   'eager' => 
   array (
@@ -59,10 +58,9 @@
     15 => 'Carbon\\Laravel\\ServiceProvider',
     16 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
     17 => 'Termwind\\Laravel\\TermwindServiceProvider',
-    18 => 'Phiki\\Adapters\\Laravel\\PhikiServiceProvider',
-    19 => 'App\\Providers\\AppServiceProvider',
-    20 => 'App\\Providers\\FortifyServiceProvider',
-    21 => 'App\\Providers\\JetstreamServiceProvider',
+    18 => 'App\\Providers\\AppServiceProvider',
+    19 => 'App\\Providers\\FortifyServiceProvider',
+    20 => 'App\\Providers\\JetstreamServiceProvider',
   ),
   'deferred' => 
   array (
