@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('doyennes', function (Blueprint $table) {
             $table->id();
+            $table->string('designation');
+            $table->string('localisation');
+            $table->string('responsable');
+             $table->integer('nombreaproximatifmembre')->nullable();
+            $table->enum('fonction',['zelateur','zelatrice']);
+            $table->string('contact')->nullable();
             $table->timestamps();
         });
     }

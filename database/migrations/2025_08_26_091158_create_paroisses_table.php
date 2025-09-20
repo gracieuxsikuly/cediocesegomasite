@@ -13,6 +13,15 @@ return new class extends Migration
     {
         Schema::create('paroisses', function (Blueprint $table) {
             $table->id();
+             $table->string('designation');
+            $table->string('localisation');
+            $table->string('longitude')->nullable();
+            $table->string('latitude')->nullable();
+            $table->string('responsable');
+            $table->enum('fonction',['zelateur','zelatrice']);
+            $table->string('contact')->nullable();
+            $table->integer('nombreaproximatifmembre')->nullable();
+             $table->foreignId('doyenne_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

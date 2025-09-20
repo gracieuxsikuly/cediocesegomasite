@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('membres', function (Blueprint $table) {
             $table->id();
+             $table->string('nomcomplet');
+            $table->string('section');
+             $table->enum('sexe',['M','F']);
+               $table->string('photo')->nullable();
+            $table->date('dateenregistrement')->nullable();
+             $table->foreignId('paroisse_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

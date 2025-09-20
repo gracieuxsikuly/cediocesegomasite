@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('ressources', function (Blueprint $table) {
             $table->id();
+            $table->string('titre');
+            $table->text('description');
+            $table->enum('typeressource',['Theme','Hynme et chant','Collection theme','Collection livre','Radio maria','Autre']);
+              $table->string('file');
             $table->timestamps();
         });
     }
