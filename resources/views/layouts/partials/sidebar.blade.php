@@ -15,47 +15,67 @@
 </li>
 
 <li>
-    <a href="{{ route('domaineintervation') }}" class="waves-effect">
+    <a href="#" class="waves-effect">
         <i class="bx bx-help-circle"></i>
-        <span key="t-calendar">Domaine d'intervention</span>
+        <span key="t-calendar">Doyenne</span>
     </a>
 </li>
 
 <li>
-    <a href="{{ route('projets.index') }}" class="waves-effect">
+    <a href="#" class="waves-effect">
         <i class="bx bx-briefcase-alt-2"></i>
-        <span key="t-chat">Projets</span>
+        <span key="t-chat">Rapportdoyenne</span>
     </a>
 </li>
 
 <li>
-    <a href="{{ route('nouvelle.index') }}" class="waves-effect">
+    <a href="#" class="waves-effect">
         <i class="bx bx-news"></i>
-        <span key="t-chat">Publication</span>
+        <span key="t-chat">Ressource</span>
     </a>
 </li>
 
 <li>
-    <a href="{{ route('photosimage.index') }}" class="waves-effect">
+    <a href="#" class="waves-effect">
         <i class="bx bx-news"></i>
-        <span key="t-chat">Nos Images</span>
+        <span key="t-chat">Paroisse</span>
     </a>
 </li>
 
 <li>
-    <a href="{{ route('donation.index') }}" class="waves-effect">
+    <a href="#" class="waves-effect">
         <i class="bx bx-gift"></i>
-        <span key="t-chat">Donation</span>
+        <span key="t-chat">Membre</span>
     </a>
 </li>
 
 <li>
-    <a href="{{ route('contact.index') }}" class="waves-effect">
+    <a href="#" class="waves-effect">
+        <i class="bx bx-envelope"></i>
+        <span key="t-chat">PhotoVideo</span>
+    </a>
+</li>
+
+<li>
+    <a href="#" class="waves-effect">
         <i class="bx bx-envelope"></i>
         <span key="t-chat">Contact</span>
     </a>
 </li>
 
+<li>
+    <a href="#" class="waves-effect">
+        <i class="bx bx-envelope"></i>
+        <span key="t-chat">Activiteprogramme</span>
+    </a>
+</li>
+
+<li>
+    <a href="#" class="waves-effect">
+        <i class="bx bx-envelope"></i>
+        <span key="t-chat">Commentaire</span>
+    </a>
+</li>
 
                         </ul>
                     </div>
