@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('photo_videos', function (Blueprint $table) {
             $table->id();
              $table->string('designation');
-            $table->string('localisation');
             $table->string('liens');
              $table->foreignId('doyenne_id')->constrained()->onDelete('cascade');
              $table->foreignId('paroisse_id')->constrained()->onDelete('cascade');
