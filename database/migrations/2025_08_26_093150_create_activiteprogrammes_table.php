@@ -25,7 +25,7 @@ return new class extends Migration
               $table->string('image3')->nullable();
               $table->enum('statut',['en attente','effectif'])->nullable();
              $table->foreignId('doyenne_id')->constrained()->onDelete('cascade');
-             $table->foreignId('doyenne_id')->constrained()->onDelete('cascade');
+             $table->foreignId('paroisse_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }
