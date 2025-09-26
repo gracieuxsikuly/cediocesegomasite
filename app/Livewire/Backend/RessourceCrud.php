@@ -71,7 +71,7 @@ class RessourceCrud extends Component
         ]);
 
         $this->resetForm();
-        $this->emit('ressourceAdded');
+        $this->dispatch('ressourceAdded');
         session()->flash('message', 'Ressource ajoutée avec succès.');
     }
 
@@ -84,7 +84,7 @@ class RessourceCrud extends Component
         $this->description = $ressource->description;
         $this->typeressource = $ressource->typeressource;
         $this->editMode = true;
-        $this->emit('openModal');
+        $this->dispatch('openModal');
     }
 
     public function updateRessource()
@@ -110,7 +110,7 @@ class RessourceCrud extends Component
         }
 
         $this->resetForm();
-        $this->emit('ressourceUpdated');
+        $this->dispatch('ressourceUpdated');
         session()->flash('message', 'Ressource modifiée avec succès.');
     }
 
@@ -130,7 +130,7 @@ class RessourceCrud extends Component
     public function showRessource($id)
     {
         $ressource = Ressource::findOrFail($id);
-        $this->emit('showRessourceDetail', $ressource);
+        $this->dispatch('showRessourceDetail', $ressource);
     }
 
     private function resetForm()

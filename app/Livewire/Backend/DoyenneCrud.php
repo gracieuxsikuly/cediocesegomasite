@@ -63,7 +63,7 @@ class DoyenneCrud extends Component
         ]);
 
         $this->resetForm();
-        $this->emit('doyenneAdded');
+        $this->dispatch('doyenneAdded');
         session()->flash('message', 'Doyenne ajoutée avec succès.');
     }
 
@@ -80,7 +80,7 @@ class DoyenneCrud extends Component
         $this->contact = $doyenne->contact;
 
         $this->editMode = true;
-        $this->emit('openModal');
+        $this->dispatch('openModal');
     }
 
     public function updateDoyenne()
@@ -98,7 +98,7 @@ class DoyenneCrud extends Component
         ]);
 
         $this->resetForm();
-        $this->emit('doyenneUpdated');
+        $this->dispatch('doyenneUpdated');
         session()->flash('message', 'Doyenne modifiée avec succès.');
     }
 

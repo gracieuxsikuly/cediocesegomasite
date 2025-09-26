@@ -140,8 +140,11 @@
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label for="fonction" class="form-label">Fonction</label>
-                                        <input type="text" class="form-control" id="fonction" wire:model.live="fonction"
-                                            placeholder="Entrez la fonction">
+                                         <select class="form-control" id="fonction" wire:model.live="fonction">
+                                            <option value="">Sélectionnez une fonction</option>
+                                            <option value="zelateur">Zélateur</option>
+                                            <option value="zelatrice">Zélatrice</option>
+                                        </select>
                                         @error('fonction')
                                         <span class="text-danger">{{ $message }}</span>
                                         @enderror

@@ -81,7 +81,7 @@ class RaportdoyenneCrud extends Component
         Rapportdoyenne::create($data);
 
         $this->resetForm();
-        $this->emit('raportAdded');
+        $this->dispatch('raportAdded');
         session()->flash('message', 'Rapport ajouté avec succès.');
     }
 
@@ -97,7 +97,7 @@ class RaportdoyenneCrud extends Component
         $this->dateenvoi = $raport->dateenvoi;
 
         $this->editMode = true;
-        $this->emit('openModal');
+        $this->dispatch('openModal');
     }
 
     public function updateRaport()
@@ -129,7 +129,7 @@ class RaportdoyenneCrud extends Component
         $raport->update($data);
 
         $this->resetForm();
-        $this->emit('raportUpdated');
+        $this->dispatch('raportUpdated');
         session()->flash('message', 'Rapport modifié avec succès.');
     }
 
