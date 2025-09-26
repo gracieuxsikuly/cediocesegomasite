@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('titre');
             $table->text('description');
             $table->enum('typeressource',['Theme','Hynme et chant','Collection theme','Collection livre','Radio maria','Autre']);
-              $table->string('file');
+              $table->string('file')->nullable();
             $table->timestamps();
         });
     }

@@ -13,4 +13,7 @@ class Doyenne extends Model
     public function paroisse(){
          $this->hasMany(Paroisse::class);
     }
+    public function rapportdoyennes(){
+        return $this->hasMany(Rapportdoyenne::class);
+    }
 }
