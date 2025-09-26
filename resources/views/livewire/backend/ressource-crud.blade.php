@@ -151,6 +151,18 @@
                                     </div>
                                 </div>
                             </div>
+                              <div class="row">
+                             <div class="col-md-12">
+                                    <label for="lienfichier" class="form-label">Fichier</label>
+                                        <input type="file" class="form-control" id="lienfichier" wire:model.live="lienfichier">
+                                        @error('lienfichier')
+                                        <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                        @if($lienfichier)
+                                            <small class="text-muted">Fichier sélectionné: {{ $lienfichier->getClientOriginalName() }}</small>
+                                        @endif
+                                </div>
+                              </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
