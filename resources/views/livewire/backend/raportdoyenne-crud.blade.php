@@ -15,17 +15,17 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title mb-3">Liste des rapports</h5>
+                     <div class="d-flex flex-column flex-md-row gap-2 mb-3">
+    {{-- Champ de recherche --}}
+    <input type="text" class="form-control" placeholder="Rechercher un doyenne..."
+        wire:model.live="searchTerm" style="flex: 1 1 70%;">
 
-                        <div class="d-flex flex-column flex-md-row gap-2 mb-3">
-                            {{-- Champ de recherche --}}
-                            <input type="text" class="form-control flex-grow-1" placeholder="Rechercher un rapport..."
-                                wire:model.live="searchTerm">
-
-                            {{-- Bouton d'ajout --}}
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#raportModal">
-                                Ajouter
-                            </button>
-                        </div>
+    {{-- Bouton d'ajout --}}
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#raportModal" style="flex: 0 0 25%;">
+        <i class="fas fa-plus-circle"></i>
+        Ajouter un nouveau Rapport
+    </button>
+</div>
 
                         <div class="table-responsive">
                             <table class="table table-responsive table-bordered table-striped align-middle">
