@@ -17,16 +17,17 @@
                     <div class="card-body">
                         <h5 class="card-title mb-3">Liste des doyennes</h5>
 
-                        <div class="d-flex flex-column flex-md-row gap-2 mb-3">
-                            {{-- Champ de recherche --}}
-                            <input type="text" class="form-control flex-grow-1" placeholder="Rechercher un doyenne..."
-                                wire:model.live="searchTerm">
+                      <div class="d-flex flex-column flex-md-row gap-2 mb-3">
+    {{-- Champ de recherche --}}
+    <input type="text" class="form-control" placeholder="Rechercher un doyenne..."
+        wire:model.live="searchTerm" style="flex: 1 1 70%;">
 
-                            {{-- Bouton d'ajout --}}
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#doyenneModal">
-                                Ajouter
-                            </button>
-                        </div>
+    {{-- Bouton d'ajout --}}
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#doyenneModal" style="flex: 0 0 25%;">
+        <i class="fas fa-plus-circle"></i>
+        Ajouter un nouveau Doyenne
+    </button>
+</div>
 
                         <div class="table-responsive">
                             <table class="table table-responsive table-bordered table-striped align-middle">
@@ -53,6 +54,20 @@
                                         <td>{{ $doyenne->nombreaproximatifmembre }}</td>
                                         <td>{{ $doyenne->fonction }}</td>
                                         <td>{{ $doyenne->contact }}</td>
+                                        <td>
+                                            <div class="btn-group" role="group">
+                                                <button type="button" class="btn btn-sm btn-warning" 
+                                                
+                                                    wire:click="editDoyenne({{ $doyenne->id }})">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                                {{-- <button type="button" class="btn btn-sm btn-danger" 
+                                                    wire:click="deleteRaport({{ $raport->id }})"
+                                                    onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce rapport?')">
+                                                    <i class="fas fa-trash"></i>
+                                                </button> --}}
+                                            </div>
+                                        </td>
                                         {{-- <td>
                                             <span class="badge {{ $doyenne->status == 'active' ? 'bg-success' : 'bg-danger' }}">
                                                 {{ ucfirst($doyenne->status) }}

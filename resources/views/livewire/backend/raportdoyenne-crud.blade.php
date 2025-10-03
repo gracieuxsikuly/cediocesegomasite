@@ -102,6 +102,13 @@
                         </h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
+                    {{-- message --}}
+                    @if (session()->has('message'))
+                        <div class="alert alert-success m-3">
+                            {{ session('message') }}
+                        </div>
+                    @endif
+                    {{-- Fin message --}}
                     <form wire:submit.prevent="{{ $editMode ? 'updateRaport' : 'addRaport' }}" enctype="multipart/form-data">
                         <div class="modal-body">
                             <div class="row">

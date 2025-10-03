@@ -50,7 +50,7 @@
                             </div>
                             <div class="col-sm-6">
                                 <div class="text-sm-end d-none d-sm-block">
-                                    Develop by Gsikuly
+                                    Develop by Gsikuly | Apostolat Croisé et Vis Zélateur Diocésain
                                 </div>
                             </div>
                         </div>
@@ -83,5 +83,6 @@
         <script src="{{('assets_backend/js/app.js')}}"></script>
          <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 @livewireScripts
+@stack('scripts')
     </body>
     </html>
