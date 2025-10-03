@@ -8,6 +8,7 @@ use App\Models\Rapportdoyenne;
 use App\Models\Doyenne;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Storage;
+use Jantinnerezo\LivewireAlert\Facades\LivewireAlert;
 
 class RaportdoyenneCrud extends Component
 {
@@ -133,9 +134,20 @@ class RaportdoyenneCrud extends Component
         session()->flash('message', 'Rapport modifié avec succès.');
     }
 
-    public function deleteRaport($id)
-    {
-        $raport = Rapportdoyenne::find($id);
+
+      public function deleteRaport($id){
+ LivewireAlert::title('Supression Doyenne')
+    ->text('Êtes-vous sûr de vouloir supprimer cet élément ?')
+    ->asConfirm()
+    ->onConfirm('deleteItem', ['id' => $id])
+    // ->onDeny('keepItem', ['id' => $this->itemId])
+    ->show();
+    }
+
+public function deleteItem($data)
+{
+    $itemId = $data['id'];
+     $raport = Rapportdoyenne::find($itemId);
         
         if ($raport) {
             // Supprimer le fichier associé
@@ -144,9 +156,14 @@ class RaportdoyenneCrud extends Component
             }
             
             $raport->delete();
+             LivewireAlert::title('Success')
+    ->text('Rapport supprimé avec succès')
+    ->success()
+    ->timer(5000) // Dismisses after 5 seconds
+    ->show();
             session()->flash('message', 'Rapport supprimé avec succès.');
         }
-    }
+}
 
     public function downloadFile($id)
     {

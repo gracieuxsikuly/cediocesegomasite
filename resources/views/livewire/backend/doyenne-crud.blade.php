@@ -60,12 +60,11 @@
                                                 
                                                     wire:click="editDoyenne({{ $doyenne->id }})">
                                                     <i class="fas fa-edit"></i>
-                                                </button>
-                                                {{-- <button type="button" class="btn btn-sm btn-danger" 
-                                                    wire:click="deleteRaport({{ $raport->id }})"
-                                                    onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce rapport?')">
+                                                </button>&nbsp;&nbsp;
+                                                <button type="button" class="btn btn-sm btn-danger" 
+                                                    wire:click="deleteDoyenne({{ $doyenne->id }})">
                                                     <i class="fas fa-trash"></i>
-                                                </button> --}}
+                                                </button>
                                             </div>
                                         </td>
                                         {{-- <td>
@@ -177,6 +176,14 @@
                                 </div>
                             </div>
                         </div>
+                        {{-- mesage --}}
+                        @if (session()->has('message'))
+                            <div class="alert alert-success alert-dismissible fade show m-3" role="alert">
+                                {{ session('message') }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        @endif
+                        {{-- fin message --}}
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
                            <button type="submit" class="btn btn-primary" wire:loading.attr="disabled" wire:target="{{ $editMode ? 'updateDoyenne' : 'addDoyenne' }}">

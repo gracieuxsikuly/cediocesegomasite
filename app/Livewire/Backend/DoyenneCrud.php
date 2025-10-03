@@ -5,6 +5,7 @@ namespace App\Livewire\Backend;
 use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\Doyenne;
+use Jantinnerezo\LivewireAlert\Facades\LivewireAlert;
 
 class DoyenneCrud extends Component
 {
@@ -102,11 +103,7 @@ class DoyenneCrud extends Component
         session()->flash('message', 'Doyenne modifiée avec succès.');
     }
 
-    public function deleteDoyenne($id)
-    {
-        Doyenne::find($id)->delete();
-        session()->flash('message', 'Doyenne supprimée avec succès.');
-    }
+
 
     private function resetForm()
     {
@@ -115,4 +112,24 @@ class DoyenneCrud extends Component
             'nombreaproximatifmembre', 'fonction', 'contact', 'editMode'
         ]);
     }
+    public function deleteDoyenne($id){
+ LivewireAlert::title('Supression Doyenne')
+    ->text('Êtes-vous sûr de vouloir supprimer cet élément ?')
+    ->asConfirm()
+    ->onConfirm('deleteItem', ['id' => $id])
+    // ->onDeny('keepItem', ['id' => $this->itemId])
+    ->show();
+    }
+
+public function deleteItem($data)
+{
+    $itemId = $data['id'];
+     Doyenne::find($itemId)->delete();
+     LivewireAlert::title('Success')
+    ->text('Doyenné Suprimé avec success')
+    ->success()
+    ->timer(5000) // Dismisses after 5 seconds
+    ->show();
+}
+
 }

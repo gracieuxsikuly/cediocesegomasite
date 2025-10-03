@@ -67,8 +67,7 @@
                                                     <i class="fas fa-edit"></i>
                                                 </button>
                                                 <button type="button" class="btn btn-sm btn-danger" 
-                                                    wire:click="deleteRaport({{ $raport->id }})"
-                                                    onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce rapport?')">
+                                                    wire:click="deleteRaport({{ $raport->id }})">
                                                     <i class="fas fa-trash"></i>
                                                 </button>
                                             </div>

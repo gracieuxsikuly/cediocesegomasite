@@ -1,4 +1,15 @@
 <?php return array (
+  'jantinnerezo/livewire-alert' => 
+  array (
+    'aliases' => 
+    array (
+      'LivewireAlert' => 'Jantinnerezo\\LivewireAlert\\LivewireAlert',
+    ),
+    'providers' => 
+    array (
+      0 => 'Jantinnerezo\\LivewireAlert\\LivewireAlertServiceProvider',
+    ),
+  ),
   'laravel/fortify' => 
   array (
     'providers' => 
