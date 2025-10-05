@@ -11,6 +11,7 @@ use App\Livewire\Backend\RaportdoyenneCrud;
 use App\Livewire\Backend\RessourceCrud;
 use App\Livewire\Backend\PhotovideoCrud;
 use Illuminate\Support\Facades\Route;
+use App\Livewire\Backend\NiyaMwezi;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -50,6 +51,9 @@ Route::middleware([
         ->name('ressource');
     Route::get('/photovideo', PhotovideoCrud::class)
         ->middleware('role:admin,user')
-        ->name('photovideo');
+        ->name('photovideo');        
+    Route::get('/niamwezis', NiyaMwezi::class)
+       ->middleware('role:admin,user')
+       ->name('niamwezis');
 });
 

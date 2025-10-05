@@ -76,6 +76,13 @@
             <span key="t-chat">Commentaire</span>
         </a>
     </li>
+
+     <li>
+        <a href="{{ route('niamwezis') }}" class="waves-effect">
+            <i class="bx bx-message"></i>
+            <span key="t-chat">Niamwezi</span>
+        </a>
+    </li>
 </ul>
     </div>
     <!-- Sidebar -->
