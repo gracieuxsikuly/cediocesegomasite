@@ -1,5 +1,13 @@
 <div>
     <div class="container-fluid">
+        <!-- Message de succès -->
+        @if($successMessage)
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ $successMessage }}
+            <button type="button" class="btn-close" wire:click="$set('successMessage', '')"></button>
+        </div>
+        @endif
+
         <!-- start page title -->
         <div class="row">
             <div class="col-12">
@@ -17,7 +25,7 @@
                         <h5 class="card-title mb-3">Niya ya mwezi</h5>
                         <div class="d-flex flex-column flex-md-row gap-2 mb-3">
                             {{-- Champ de recherche --}}
-                            <input type="text" class="form-control" placeholder="Rechercher un doyenne..."
+                            <input type="text" class="form-control" placeholder="Rechercher..."
                                 wire:model.live="searchTerm" style="flex: 1 1 70%;">
 
                             {{-- Bouton d'ajout --}}
@@ -54,7 +62,6 @@
                                          <td>
                                             <div class="btn-group" role="group">
                                                 <button type="button" class="btn btn-sm btn-warning" 
-                                                
                                                     wire:click="editNia({{ $niamwezist->id }})">
                                                     <i class="fas fa-edit"></i>
                                                 </button>&nbsp;&nbsp;
@@ -67,7 +74,7 @@
                                     </tr>
                                     @empty
                                     <tr>
-                                        <td colspan="4" class="text-center">Aucun élément trouvé.</td>
+                                        <td colspan="5" class="text-center">Aucun élément trouvé.</td>
                                     </tr>
                                     @endforelse
                                 </tbody>
@@ -90,17 +97,10 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="niamweziModal">
-                            {{ $editMode ? 'Modifier' : 'Ajouter' }}
+                            {{ $editMode ? 'Modifier' : 'Ajouter' }} Nia
                         </h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    {{-- message --}}
-                    @if (session()->has('message'))
-                    <div class="alert alert-success m-3">
-                        {{ session('message') }}
-                    </div>
-                    @endif
-                    {{-- Fin message --}}
                     <form wire:submit.prevent="{{ $editMode ? 'updateNiamwezi' : 'addNiamwezi' }}">
                         <div class="modal-body">
                             <div class="row">
@@ -135,6 +135,7 @@
                                         @error('mois') <span class="text-danger">{{ $message }}</span> @enderror
                                     </div>
                                 </div>
+                            </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
@@ -152,6 +153,26 @@
                 </div>
             </div>
         </div>
+
+        <!-- Modal de confirmation de suppression -->
+        @if($confirmingDelete)
+        <div class="modal fade show" style="display: block; background-color: rgba(0,0,0,0.5);" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Suppression Nia</h5>
+                    </div>
+                    <div class="modal-body">
+                        <p>Êtes-vous sûr de vouloir supprimer cet élément ?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" wire:click="cancelDelete">Annuler</button>
+                        <button type="button" class="btn btn-danger" wire:click="confirmDelete">Supprimer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endif
     </div> <!-- container-fluid -->
 </div>
 
