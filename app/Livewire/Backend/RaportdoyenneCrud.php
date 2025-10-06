@@ -136,7 +136,7 @@ class RaportdoyenneCrud extends Component
 
 
       public function deleteRaport($id){
- LivewireAlert::title('Supression Doyenne')
+ LivewireAlert::title('Supression Rapport')
     ->text('Êtes-vous sûr de vouloir supprimer cet élément ?')
     ->asConfirm()
     ->onConfirm('deleteItem', ['id' => $id])
