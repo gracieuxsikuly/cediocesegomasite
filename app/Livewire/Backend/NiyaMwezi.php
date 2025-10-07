@@ -44,7 +44,7 @@ class Niyamwezi extends Component
         if($nia){
             $this->successMessage = 'Enregistrement effectué avec succès';
             $this->resetInputFields();
-            $this->dispatch('niamweziAdded');
+            // $this->dispatch('niamweziAdded');
         }
     }
 
@@ -57,7 +57,7 @@ class Niyamwezi extends Component
             $this->designation = $nia->designation;
             $this->mois = $nia->mois;
             $this->editMode = true;
-            $this->dispatch('openNiamweziModal');
+            // $this->dispatch('openNiamweziModal');
         }
     }
 
@@ -91,7 +91,7 @@ class Niyamwezi extends Component
     {
         $nia = Niamwezimodel::find($id);
         if($nia) {
-            $nia->statuts = $nia->statuts == 'actif' ? 'inactif' : 'actif';
+            $nia->statut = $nia->statut == 'actif' ? 'inactif' : 'actif';
             $nia->save();
             
             $this->successMessage = 'Statut modifié avec succès';
@@ -131,7 +131,7 @@ class Niyamwezi extends Component
             });
         }
 
-        $niamwezis = $query->paginate(10);
+        $niamwezis = $query->paginate(12);
         
         return view('livewire.backend.niya-mwezi', [
             'niamwezis' => $niamwezis

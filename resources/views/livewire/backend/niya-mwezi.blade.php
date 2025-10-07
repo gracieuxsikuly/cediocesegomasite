@@ -51,12 +51,12 @@
                                     <tr>
                                         <td>{{ $niamwezist->id }}</td>
                                         <td>{{ $niamwezist->designation }}</td>
-                                        <td>{{ $niamwezist->mois }}</td>
+                                        <td>{{ ucfirst($niamwezist->mois) }}</td>
                                         <td>
-                                            @if($niamwezist->statuts == 'actif')
-                                            <a wire:click.prevent="changeStatus({{ $niamwezist->id }})"><span class="badge bg-success">{{ $niamwezist->statuts }}</span></a>
+                                            @if($niamwezist->statut == 'actif')
+                                            <a style="cursor: pointer" wire:click.prevent="changeStatus({{ $niamwezist->id }})"><span class="badge bg-success">{{ $niamwezist->statut }}</span></a>
                                             @else
-                                            <a wire:click.prevent="changeStatus({{ $niamwezist->id }})"><span class="badge bg-secondary">{{ $niamwezist->statuts }}</span></a>
+                                            <a style="cursor: pointer" wire:click.prevent="changeStatus({{ $niamwezist->id }})"><span class="badge bg-secondary">{{ $niamwezist->statut }}</span></a>
                                             @endif
                                         </td>
                                          <td>
