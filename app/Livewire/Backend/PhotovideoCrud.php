@@ -24,6 +24,7 @@ class PhotovideoCrud extends Component
     public $lien = [];
     public $doyenne_id = '';
     public $paroisse_id = '';
+    public $paroisses = [];
 
     protected $rules = [
         'designation' => 'required|string|max:255',
@@ -51,12 +52,10 @@ class PhotovideoCrud extends Component
 
         $photosVideos = $query->orderBy('id', 'desc')->paginate(10);
         $doyennes = Doyenne::all();
-        $paroisses = Paroisse::all();
 
         return view('livewire.backend.photovideo-crud', [
             'photosVideos' => $photosVideos,
             'doyennes' => $doyennes,
-            'paroisses' => $paroisses
         ])->layout('layouts.defaultbackend', ['title' => 'Photo & Vidéo']);
     }
 
@@ -260,4 +259,10 @@ class PhotovideoCrud extends Component
             $this->lien = array_values($this->lien); // Réindexer le tableau
         }
     }
+      public function updatedDoyenneId($value)
+    {
+        // charger les paroisses associées à la doyenne sélectionnée si nécessaire
+        $this->paroisses = Paroisse::where('doyenne_id', $value)->get();
+    }
+
 }
