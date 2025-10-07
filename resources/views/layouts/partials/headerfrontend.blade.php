@@ -18,8 +18,9 @@
                             <ul class="navbar-nav mr-auto" id="menu">
                                 <li class="nav-item"><a class="nav-link" href="{{ route('acceuil') }}">Acceuil</a>
                                 </li>                                
+                                 <li class="nav-item"><a class="nav-link" href="{{ route('aboutus') }}">Apropos de nous</a></li>
                                 <li class="nav-item"><a class="nav-link" href="{{ route('doyennes') }}">Doyennés</a></li>
-                                <li class="nav-item"><a class="nav-link" href="{{ route('paroisses') }}">Paroisses</a></li>
+                               
                                 <li class="nav-item"><a class="nav-link" href="{{ route('activites') }}">Activités</a>
                                 </li>
                                  <li class="nav-item"><a class="nav-link" href="{{ route('ressources') }}">Ressources</a>

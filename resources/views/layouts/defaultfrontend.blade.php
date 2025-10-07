@@ -79,8 +79,8 @@
     <!-- Parallax js -->
     <script src="{{asset('asset_frontend/js/parallaxie.js')}}"></script>
     <!-- MagicCursor js file -->
-    {{-- <script src="{{asset('asset_frontend/js/gsap.min.js')}}"></script>
-    <script src="{{asset('asset_frontend/js/magiccursor.js')}}"></script> --}}
+    <script src="{{asset('asset_frontend/js/gsap.min.js')}}"></script>
+    {{-- <script src="{{asset('asset_frontend/js/magiccursor.js')}}"></script> --}}
     <!-- Text Effect js file -->
     <script src="{{asset('asset_frontend/js/SplitText.js')}}"></script>
     <script src="{{asset('asset_frontend/js/ScrollTrigger.min.js')}}"></script>

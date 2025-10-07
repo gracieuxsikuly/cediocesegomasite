@@ -9,7 +9,7 @@
                         <div class="hero-slide">
                             <!-- Slider Image Start -->
                             <div class="hero-slider-image">
-                                <img src="{{asset('asset_frontend/images/hero-bg.jpg')}}" alt="">
+                                <img src="{{asset('asset_frontend/images/hero-bg-3.jpg')}}" alt="">
                             </div>
                             <!-- Slider Image End -->
     
@@ -21,16 +21,16 @@
                                         <div class="hero-content">
                                             <!-- Section Title Start -->
                                             <div class="section-title">
-                                                <h3 class="wow fadeInUp">make a difference today</h3>
-                                                <h1 class="text-anime-style-2" data-cursor="-opaque">Loving god, loving other and serving the world !</h1>
-                                                <p class="wow fadeInUp" data-wow-delay="0.25s">Experience God's love and grace in a welcoming community where faith grows, hope thrives, and everyone is cherished.</p>
+                                                <h3 class="wow fadeInUp">L'adoration</h3>
+                                                <h1 class="text-anime-style-2" data-cursor="-opaque">Notre device</h1>
+                                                <p class="wow fadeInUp" data-wow-delay="0.25s">Prie, communie, sacrifie-toi, sois apotre</p>
                                             </div>
                                             <!-- Section Title End -->
                     
                                             <!-- Hero Content Body Start -->
                                             <div class="hero-content-body wow fadeInUp" data-wow-delay="0.5s">
-                                                <a href="#" class="btn-default"><span>join in person</span></a>
-                                                <a href="#" class="btn-default btn-highlighted"><span>donate now</span></a>
+                                                <a href="{{ route('ressources') }}" class="btn-default"><span>Ressources</span></a>
+                                                <a href="{{ route('contact') }}" class="btn-default btn-highlighted"><span>Rejoindre la croisade eucharistique</span></a>
                                             </div>
                                             <!-- Hero Content Body End -->
                                         </div>
@@ -51,7 +51,7 @@
                         <div class="hero-slide">
                             <!-- Slider Image Start -->
                             <div class="hero-slider-image">
-                                <img src="{{asset('asset_frontend/images/hero-bg-2.jpg')}}" alt="">
+                                <img src="{{asset('asset_frontend/images/hero-bg-4.jpg')}}" alt="">
                             </div>
                             <!-- Slider Image End -->
     
@@ -63,16 +63,16 @@
                                         <div class="hero-content">
                                             <!-- Section Title Start -->
                                             <div class="section-title">
-                                                <h3 class="wow fadeInUp">make a difference today</h3>
-                                                <h1 class="text-anime-style-2" data-cursor="-opaque">Loving god, loving other and serving the world !</h1>
-                                                <p class="wow fadeInUp" data-wow-delay="0.25s">Experience God's love and grace in a welcoming community where faith grows, hope thrives, and everyone is cherished.</p>
+                                                <h3 class="wow fadeInUp">Avec le Christ!!!</h3>
+                                                <h1 class="text-anime-style-2" data-cursor="-opaque">Rien n'est impossible</h1>
+                                                <p class="wow fadeInUp" data-wow-delay="0.25s">Une journée sans messe est une journée sans soleil</p>
                                             </div>
                                             <!-- Section Title End -->
                     
                                             <!-- Hero Content Body Start -->
                                             <div class="hero-content-body wow fadeInUp" data-wow-delay="0.5s">
-                                                <a href="#" class="btn-default"><span>join in person</span></a>
-                                                <a href="#" class="btn-default btn-highlighted"><span>donate now</span></a>
+                                                <a href="{{ route('ressources') }}" class="btn-default"><span>Ressources</span></a>
+                                                <a href="{{ route('contact') }}" class="btn-default btn-highlighted"><span>Rejoindre la croisade eucharistique</span></a>
                                             </div>
                                             <!-- Hero Content Body End -->
                                         </div>
@@ -87,6 +87,7 @@
                         </div>
                     </div>
                     <!-- Hero Slide End -->
+                     
                 </div>
                 <div class="hero-pagination"></div>
             </div>
@@ -99,19 +100,19 @@
         <!-- Scrolling Ticker Start -->
         <div class="scrolling-ticker-box">
             <div class="scrolling-content">
-                <span><img src="{{asset('asset_frontend/images/icon-sparkles.svg')}}" alt="">Love Your Neighbor as yourself</span>
-                <span><img src="{{asset('asset_frontend/images/icon-sparkles.svg')}}" alt="">Love Your Neighbor as yourself</span>
-                <span><img src="{{asset('asset_frontend/images/icon-sparkles.svg')}}" alt="">Love Your Neighbor as yourself</span>
-                <span><img src="{{asset('asset_frontend/images/icon-sparkles.svg')}}" alt="">Love Your Neighbor as yourself</span>
-                <span><img src="{{asset('asset_frontend/images/icon-sparkles.svg')}}" alt="">Love Your Neighbor as yourself</span>
+                <span></span>
+                <span></span>
+                  <span><img src="{{asset('asset_frontend/images/icon-sparkles.svg')}}" alt="">Niya ya mwezi :{{$this->mois}}</span>
+                <span><img src="{{asset('asset_frontend/images/icon-sparkles.svg')}}" alt="">{{$this->designation}}</span>
+                <span></span>
             </div>
 
             <div class="scrolling-content">
-                <span><img src="{{asset('asset_frontend/images/icon-sparkles.svg')}}" alt="">Love Your Neighbor as yourself</span>
-                <span><img src="{{asset('asset_frontend/images/icon-sparkles.svg')}}" alt="">Love Your Neighbor as yourself</span>
-                <span><img src="{{asset('asset_frontend/images/icon-sparkles.svg')}}" alt="">Love Your Neighbor as yourself</span>
-                <span><img src="{{asset('asset_frontend/images/icon-sparkles.svg')}}" alt="">Love Your Neighbor as yourself</span>
-                <span><img src="{{asset('asset_frontend/images/icon-sparkles.svg')}}" alt="">Love Your Neighbor as yourself</span>
+                <span></span>
+                  <span></span>
+                  <span><img src="{{asset('asset_frontend/images/icon-sparkles.svg')}}" alt="">Niya ya mwezi :{{$this->mois}}</span>
+                <span><img src="{{asset('asset_frontend/images/icon-sparkles.svg')}}" alt="">{{$this->designation}}</span>
+                <span></span>
             </div>
         </div>
     </div>
@@ -126,13 +127,13 @@
                     <div class="about-image">
                         <div class="about-img-1">
                             <figure class="image-anime reveal">
-                                <img src="{{asset('asset_frontend/images/about-us-img-1.jpg')}}" alt="">
+                                <img src="{{asset('asset_frontend/images/about-us-img-3.jpg')}}" alt="">
                             </figure>
                         </div>
 
                         <div class="about-img-2">
                             <figure class="image-anime reveal">
-                                <img src="{{asset('asset_frontend/images/about-us-img-2.jpg')}}" alt="">
+                                <img src="{{asset('asset_frontend/images/about.jpg')}}" alt="">
                             </figure>
                         </div>
                     </div>
@@ -144,10 +145,20 @@
                     <div class="about-content">
                         <!-- Section Title Start -->
                         <div class="section-title">
-                            <h3 class="wow fadeInUp">about us</h3>
-                            <h2 class="text-anime-style-2" data-cursor="-opaque">Faith, hope, and love in <span>action every day</span></h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.25s">We are a vibrant community of believers dedicated to worship, fellowship, and service. Our mission is to share God's love, grow in faith, and make a positive impact in the world through compassionate outreach and meaningful connections.</p>
-                            <p class="wow fadeInUp" data-wow-delay="0.5s">Our church is a welcoming place where everyone can find support, inspiration, and a sense of belonging. Together, we strive to live out our faith and make a difference.</p>
+                            <h3 class="wow fadeInUp">A propos de nous</h3>
+                            <h2 class="text-anime-style-2" data-cursor="-opaque">
+                                Prie, communie, sacrifie-toi,<span>sois apotre</span></h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.25s" style="text-align: justify;">La Croisade Eucharistique est un mouvement d’action catholique dont la spiritualité
+est centrée sur l’Eucharistie. Mouvement pontifical à vocation apostolique, elle vise à
+contribuer à la vie de l’Église par la formation d’une véritable École primaire de
+l’action catholique.</p>
+                            <p class="wow fadeInUp" data-wow-delay="0.5s" style="text-align: justify;">
+                                Fidèle à sa spiritualité et à son charisme, la Croisade Eucharistique trouve son
+activité principale dans <b>la célébration de la Messe</b> et <b>l’adoration du Saint-Sacrement</b>, considérées comme le cœur de sa mission. Cette culture eucharistique
+confère au mouvement un caractère à la fois contemplatif et sacerdotal, tout en
+demeurant actif et ludique. Elle a 4 sections : 
+
+                            </p>
                         </div>
                         <!-- Section Title End -->
 
@@ -158,8 +169,9 @@
                                 <div class="icon-box">
                                     <img src="{{asset('asset_frontend/images/icon-about-list-1.svg')}}" alt="">
                                 </div>
+                                {{-- les enfants (6-12 ans), les adolescents (13-17 ans), les jeunes (18-35 ans) et les adultes (36 ans et plus). --}}
                                 <div class="about-list-item-content">
-                                    <h3>share god's love</h3>
+                                    <h3>A.	La Section des Croisillons et Croisillonne (4-10 ans)</h3>
                                 </div>
                             </div>
                             <!-- About List Item End -->
@@ -170,7 +182,7 @@
                                     <img src="{{asset('asset_frontend/images/icon-about-list-2.svg')}}" alt="">
                                 </div>
                                 <div class="about-list-item-content">
-                                    <h3>foster spiritual growth</h3>
+                                    <h3>B.	La section des Feux Nouveaux (11-14 ans)</h3>
                                 </div>
                             </div>
                             <!-- About List Item End -->
@@ -181,7 +193,7 @@
                                     <img src="{{asset('asset_frontend/images/icon-about-list-3.svg')}}" alt="">
                                 </div>
                                 <div class="about-list-item-content">
-                                    <h3>serve our community</h3>
+                                    <h3>C.	La section des Cadets (tes) (15-25 ans)</h3>
                                 </div>
                             </div>
                             <!-- About List Item End -->
@@ -192,7 +204,7 @@
                                     <img src="{{asset('asset_frontend/images/icon-about-list-4.svg')}}" alt="">
                                 </div>
                                 <div class="about-list-item-content">
-                                    <h3>build strong relationships</h3>
+                                    <h3>D.	La section apostolique (Equap) (26 ans et plus)</h3>
                                 </div>
                             </div>
                             <!-- About List Item End -->
@@ -202,7 +214,7 @@
 
                         <!-- About Us Footer Start -->
                         <div class="about-us-footer wow fadeInUp" data-wow-delay="1s">
-                            <a href="#" class="btn-default">read more about us</a>
+                            <a href="{{ route('aboutus') }}" class="btn-default">En savoir plus</a>
                         </div>
                         <!-- About Us Footer End -->
                     </div>
@@ -213,149 +225,68 @@
     </div>
     <!-- About Us Section End -->
 
-    <!-- Join Worship Section Start -->
+    
+     <!-- Our Mission Section Start -->
     <div class="join-worship">
         <div class="container">
-            <div class="row section-row">
-                <div class="col-lg-12">
-                    <!-- Section Title Start -->
-                    <div class="section-title">
-                        <h3 class="wow fadeInUp">worship with us</h3>
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">Join us on Sunday at <span>8:00 & 9:00 AM</span></h2>
-                    </div>
-                    <!-- Section Title End -->
-                </div>
-            </div>
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <!-- Highlighted Worship Item Start -->
-                    <div class="highlighted-worship-item wow fadeInUp">
-                        <!-- Highlighted Worship Featured Image Start -->
-                        <div class="highlighted-worship-image">
-                            <figure>
-                                <a href="#" class="image-anime" data-cursor-text="View">
-                                    <img src="{{asset('asset_frontend/images/join-worship-img-1.jpg')}}" alt="">
-                                </a>
+                    <div class="mission-content">
+                        <!-- Section Title Start -->
+                        <div class="section-title">
+                            <h3 class="wow fadeInUp">SILAHA ZETU</h3>
+                            <h2 class="text-anime-style-2" data-cursor="-opaque">Sala, sadaka <span>Komunio, na Kitume</span></h2>
+                        </div>
+                        <!-- Section Title End -->
+
+                        <!-- Mission Content Body Start -->
+                        <div class="mission-content-body">
+                            <h3 class="wow fadeInUp" data-wow-delay="0.25s">UKOMO WETU</h3>
+                            <p class="wow fadeInUp" data-wow-delay="0.5s"> Ukomo wetu ni kulinganisha maisha yetu
+na ya yesu kristu “nime ishi ila si mimi tena ni kristu anaye
+ishi ndani mwangu” sherti kuangaliya njiya saba (7 piste) na
+namna saba (7 moyens) kwa kufikiya ukomo wa croisade
+eucharistique</p>
+                        </div>
+                        <!-- Mission Content Body End -->
+                        <div class="mission-content-body">
+                            <h3 class="wow fadeInUp" data-wow-delay="0.25s">LES 7 PISTE D’UN CROISE / NJIYA 7 ZA MUCROISE</h3>
+                            <p class="wow fadeInUp" data-wow-delay="0.5s"> 
+                                1. Kukombowa roho zinazo gandamizwa na shetani kuzileta kwake yesu.<br>
+                                2. Kufata umoja wa wandugu wa kristu wote piya makanisa zote.<br>
+                                3. Kuishi maisha ya uusiano na yesu kristu katinda vikundi vya sala .<br>
+                                4. Kwa kipekee kuishi maisha ya sala na ushirika kwa kuchangiya neno la yesu na wengine wa kristu.<br>
+                                5. Kusikiya uito wamatendo ya roho mtakatifu ndani ya maisha yako kila siku na ndani ya tukiyo ya histoire yako.<br>
+                                6. Kuishi kama vile mitume wa sasa.<br>
+                                7. Kuishi mwenyi heri kwakuendelesha maisha ya kristu.<br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <!-- Mission Image Start -->
+                    <div class="mission-image">
+                        <!-- Mission Image Start -->
+                        <div class="mission-img">
+                            <figure class="image-anime reveal">
+                                <img src="{{asset('asset_frontend/images/hero-bg-5.jpg')}}" alt="">
                             </figure>
                         </div>
-                        <!-- Highlighted Worship Featured Image End -->
+                        <!-- Mission Image End -->
 
-                        <!-- Highlighted Worship Body Start -->
-                        <div class="highlighted-worship-body">
-                            <!-- Highlighted Worship Content Start -->
-                            <div class="highlighted-worship-content">
-                                <h3>youth worship</h3>
-                                <p>Engaging teens in faith, fellowship, growth.</p>
-                            </div>
-                            <!-- Highlighted Worship Content End -->
-                            <div class="highlighted-worship-btn">
-                                <a href="#" class="readmore-btn"><img src="{{asset('asset_frontend/images/arrow-white.svg')}}" alt=""></a>
-                            </div>
+                        <!-- Mission Life Circle Start -->
+                        <div class="mission-life-circle">
+                            <img src="{{asset('asset_frontend/images/CElogs.png')}}" alt="">
                         </div>
-                        <!-- Highlighted Worship Body End -->
+                        <!-- Mission Life Circle End -->
                     </div>
-                    <!-- Highlighted Worship Item End -->
-                </div>
-                <div class="col-lg-6">
-                    <div class="worship-box">
-                        <!-- Worship Item Start -->
-                        <div class="worship-item wow fadeInUp" data-wow-delay="0.25s">
-                            <!-- Worship Image Start -->
-                            <div class="worship-image">
-                                <figure>
-                                    <a href="#" class="image-anime" data-cursor-text="View">
-                                        <img src="{{asset('asset_frontend/images/join-worship-img-2.jpg')}}" alt="">
-                                    </a>
-                                </figure>
-                            </div>
-                            <!-- Worship Image End -->
-
-                            <!-- Worship Body Start -->
-                            <div class="worship-body">
-                                <!-- Worship Content Start -->
-                                <div class="worship-content">
-                                    <h3>children's worship</h3>
-                                    <p>Fun, faith-filled worship for kids ages 4-12.</p>
-                                </div>
-                                <!-- Worship Content End -->
-
-                                <!-- Worship Btn Start -->
-                                <div class="worship-btn">
-                                    <a href="#" class="readmore-btn"><img src="{{asset('asset_frontend/images/arrow-white.svg')}}" alt=""></a>
-                                </div>
-                                <!-- Worship Btn End -->
-                            </div>
-                            <!-- Worship Body End -->
-                        </div>
-                        <!-- Worship Item End -->
-
-                        <!-- Worship Item Start -->
-                        <div class="worship-item wow fadeInUp" data-wow-delay="0.5s">
-                            <!-- Worship Image Start -->
-                            <div class="worship-image">
-                                <figure>
-                                    <a href="#" class="image-anime" data-cursor-text="View">
-                                        <img src="{{asset('asset_frontend/images/join-worship-img-3.jpg')}}" alt="">
-                                    </a>
-                                </figure>
-                            </div>
-                            <!-- Worship Image End -->
-
-                            <!-- Worship Body Start -->
-                            <div class="worship-body">
-                                <!-- Worship Content Start -->
-                                <div class="worship-content">
-                                    <h3>sunday school worship </h3>
-                                    <p>Learning and worship for all ages.</p>
-                                </div>
-                                <!-- Worship Content End -->
-
-                                <!-- Worship Btn Start -->
-                                <div class="worship-btn">
-                                    <a href="#" class="readmore-btn"><img src="{{asset('asset_frontend/images/arrow-white.svg')}}" alt=""></a>
-                                </div>
-                                <!-- Worship Btn End -->
-                            </div>
-                            <!-- Worship Body End -->
-                        </div>
-                        <!-- Worship Item End -->
-
-                        <!-- Worship Item Start -->
-                        <div class="worship-item wow fadeInUp" data-wow-delay="0.75s">
-                            <!-- Worship Image Start -->
-                            <div class="worship-image">
-                                <figure>
-                                    <a href="#" class="image-anime" data-cursor-text="View">
-                                        <img src="{{asset('asset_frontend/images/join-worship-img-4.jpg')}}" alt="">
-                                    </a>
-                                </figure>
-                            </div>
-                            <!-- Worship Image End -->
-
-                            <!-- Worship Body Start -->
-                            <div class="worship-body">
-                                <!-- Worship Content Start -->
-                                <div class="worship-content">
-                                    <h3>children's worship</h3>
-                                    <p>Fun, faith-filled worship for kids ages 4-12.</p>
-                                </div>
-                                <!-- Worship Content End -->
-
-                                <!-- Worship Btn Start -->
-                                <div class="worship-btn">
-                                    <a href="#" class="readmore-btn"><img src="{{asset('asset_frontend/images/arrow-white.svg')}}" alt=""></a>
-                                </div>
-                                <!-- Worship Btn End -->
-                            </div>
-                            <!-- Worship Body End -->
-                        </div>
-                        <!-- Worship Item End -->
-                    </div>
+                    <!-- Mission Image End -->
                 </div>
             </div>
         </div>
     </div>
-    <!-- Join Worship Section End -->
+    <!-- Our Mission Section End -->
 
     <!-- Our Counter Section Start -->
     <div class="our-counter">
@@ -441,57 +372,7 @@
     </div>
     <!-- Our Counter Section End -->
 
-    <!-- Our Mission Section Start -->
-    <div class="our-mission">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="mission-content">
-                        <!-- Section Title Start -->
-                        <div class="section-title">
-                            <h3 class="wow fadeInUp">our mission</h3>
-                            <h2 class="text-anime-style-2" data-cursor="-opaque">Our Mission to Serve, <span>Love, and Grow</span></h2>
-                        </div>
-                        <!-- Section Title End -->
-
-                        <!-- Mission Content Body Start -->
-                        <div class="mission-content-body">
-                            <h3 class="wow fadeInUp" data-wow-delay="0.25s">Our mission is to share God's love, foster spiritual growth, and serve our community with compassion and purpose.</h3>
-                            <p class="wow fadeInUp" data-wow-delay="0.5s">Our mission is to share God's love and grace by fostering spiritual growth, serving our community with compassion, and building meaningful relationships. We are dedicated to living out our faith through worship, outreach, and impactful service.</p>
-                        </div>
-                        <!-- Mission Content Body End -->
-
-                        <!-- Mission Content Footer Start -->
-                        <div class="mission-content-footer wow fadeInUp" data-wow-delay="0.75s">
-                            <a href="#" class="btn-default">contact now</a>
-                        </div>
-                        <!-- Mission Content Footer End -->
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <!-- Mission Image Start -->
-                    <div class="mission-image">
-                        <!-- Mission Image Start -->
-                        <div class="mission-img">
-                            <figure class="image-anime reveal">
-                                <img src="{{asset('asset_frontend/images/mission-image.jpg')}}" alt="">
-                            </figure>
-                        </div>
-                        <!-- Mission Image End -->
-
-                        <!-- Mission Life Circle Start -->
-                        <div class="mission-life-circle">
-                            <img src="{{asset('asset_frontend/images/mission-life-circle-img.png')}}" alt="">
-                        </div>
-                        <!-- Mission Life Circle End -->
-                    </div>
-                    <!-- Mission Image End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Our Mission Section End -->
+   
 
     <!-- Our Services Section Start -->
     <div class="our-services">

@@ -14,8 +14,10 @@
                         <!-- About Footer Content Start -->
                         <div class="about-footer-content">
                             <p>
-                                La Croisade Eucharistique est un mouvement catholique international dédié 
-                                à la promotion de la foi, de la prière et du service parmi les enfants et les jeunes.
+                              La Croisade Eucharistique est un mouvement d’action catholique dont la spiritualité
+est centrée sur l’Eucharistie. Mouvement pontifical à vocation apostolique, elle vise à
+contribuer à la vie de l’Église par la formation d’une véritable École primaire de
+l’action catholique.
                             </p>
                         </div>
                         <!-- Footer Social Links Start -->
@@ -39,8 +41,8 @@
                         <h3>Liens rapides</h3>
                         <ul>
                             <li><a href="{{ route('acceuil') }}">Accueil</a></li>
+                              <li><a href="{{ route('aboutus') }}">Apropos de nous</a></li>
                             <li><a href="{{ route('doyennes') }}">Doyennés</a></li>
-                            <li><a href="{{ route('paroisses') }}">Paroisses</a></li>
                             <li><a href="{{ route('activites') }}">Activités</a></li>
                             <li><a href="{{ route('ressources') }}">Ressources</a></li>
                             <li><a href="{{ route('galleriephoto') }}">Galerie</a></li>

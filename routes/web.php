@@ -17,7 +17,7 @@ use App\Livewire\Frontend\ActiviteLivewire;
 use App\Livewire\Frontend\ContactLivewire;
 use App\Livewire\Frontend\DoyenneLivewire;
 use App\Livewire\Frontend\GalerieLivewire;
-use App\Livewire\Frontend\ParoisseLivewire;
+use App\Livewire\Frontend\AboutLivewire;
 use App\Livewire\Frontend\RessourceLivewire;
 
 Route::get('/', function () {
@@ -65,8 +65,8 @@ Route::middleware([
 });
 // frontend routes
 Route::get('/acceuil', Index::class)->name('acceuil');
+ Route::get('/apropos-de-nous',AboutLivewire::class)->name('aboutus');
   Route::get('/nos-doyenne',DoyenneLivewire::class)->name('doyennes');
-  Route::get('/nos-paroisses',ParoisseLivewire::class)->name('paroisses');
     Route::get('/nos-activites',ActiviteLivewire::class)->name('activites');
       Route::get('/nos-ressources',RessourceLivewire::class)->name('ressources');
        Route::get('/notre-gallerie-photo',GalerieLivewire::class)->name('galleriephoto');
