@@ -3,7 +3,6 @@
 use App\Livewire\Backend\Dashboardpage;
 use App\Livewire\Backend\ActiviteprogramCrud;
 use App\Livewire\Backend\Commentaires;
-use App\Livewire\Backend\contacts;
 use App\Livewire\Backend\DoyenneCrud;
 use App\Livewire\Backend\MembresCrud;
 use App\Livewire\Backend\ParoisseCrud;
@@ -12,6 +11,7 @@ use App\Livewire\Backend\RessourceCrud;
 use App\Livewire\Backend\PhotovideoCrud;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Backend\NiyaMwezi;
+use App\Livewire\Backend\Contacts;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -31,9 +31,6 @@ Route::middleware([
     Route::get('/commentaires', Commentaires::class)
         ->middleware('role:admin,user')
         ->name('commentaires');
-    Route::get('/contacts', contacts::class)
-        ->middleware('role:admin,user')
-        ->name('contacts');
     Route::get('/doyenne', DoyenneCrud::class)
         ->middleware('role:admin,user')
         ->name('doyenne');
@@ -54,6 +51,8 @@ Route::middleware([
         ->name('photovideo');        
     Route::get('/niamwezis', NiyaMwezi::class)
        ->middleware('role:admin,user')
-       ->name('niamwezis');
+       ->name('niamwezis');   
+    Route::get('/contacts', Contacts::class)
+       ->middleware('role:admin,user')
+       ->name('contacts');
 });
-

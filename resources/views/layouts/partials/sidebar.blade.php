@@ -83,6 +83,12 @@
             <span key="t-chat">Niamwezi</span>
         </a>
     </li>
+    <li>
+        <a href="{{ route('contacts') }}" class="waves-effect">
+            <i class="bx bx-message"></i>
+            <span key="t-chat">Contacts</span>
+        </a>
+    </li>
 </ul>
     </div>
     <!-- Sidebar -->
