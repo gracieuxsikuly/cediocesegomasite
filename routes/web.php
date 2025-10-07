@@ -13,6 +13,12 @@ use App\Livewire\Backend\PhotovideoCrud;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Backend\NiyaMwezi;
 use App\Livewire\Frontend\Index;
+use App\Livewire\Frontend\ActiviteLivewire;
+use App\Livewire\Frontend\ContactLivewire;
+use App\Livewire\Frontend\DoyenneLivewire;
+use App\Livewire\Frontend\GalerieLivewire;
+use App\Livewire\Frontend\ParoisseLivewire;
+use App\Livewire\Frontend\RessourceLivewire;
 
 Route::get('/', function () {
     return redirect()->route('acceuil');
@@ -59,11 +65,11 @@ Route::middleware([
 });
 // frontend routes
 Route::get('/acceuil', Index::class)->name('acceuil');
-//   Route::get('/causes',Causes::class)->name('causes');
-//   Route::get('/events',Blogs::class)->name('events');
-//     Route::get('/gallery',GalleryPhoto::class)->name('gallery');
-//   Route::get('/about',Apropos::class)->name('about');
-//   Route::get('/contact',Contact::class)->name('contact');
-//     Route::get('/detail-projet/{slug}',DetailProjet::class)->name('detail-projet');
-//       Route::get('/detail-news/{slug}',DetailNews::class)->name('detail-news');
+  Route::get('/nos-doyenne',DoyenneLivewire::class)->name('doyennes');
+  Route::get('/nos-paroisses',ParoisseLivewire::class)->name('paroisses');
+    Route::get('/nos-activites',ActiviteLivewire::class)->name('activites');
+      Route::get('/nos-ressources',RessourceLivewire::class)->name('ressources');
+       Route::get('/notre-gallerie-photo',GalerieLivewire::class)->name('galleriephoto');
+   Route::get('/contact',ContactLivewire::class)->name('contact');
+//     Route::get('/detail-activite/{slug}',DetailActivite::class)->name('detail-activite');
 

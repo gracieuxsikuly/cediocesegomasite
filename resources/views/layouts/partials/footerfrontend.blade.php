@@ -6,45 +6,50 @@
                     <div class="about-footer">
                         <!-- Footer Logo Start -->
                         <div class="footer-logo">
-                            <img src="images/footer-logo.svg" alt="">
+                            <img src="{{ asset('asset_frontend/images/logoce.png') }}" alt=""
+                            width="80" height="80" >
                         </div>
                         <!-- Footer Logo End -->
 
                         <!-- About Footer Content Start -->
                         <div class="about-footer-content">
-                            <p>Lorem Ipsum is simply dummy text of printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
+                            <p>
+                                La Croisade Eucharistique est un mouvement catholique international dédié 
+                                à la promotion de la foi, de la prière et du service parmi les enfants et les jeunes.
+                            </p>
                         </div>
                         <!-- Footer Social Links Start -->
-                        <div class="footer-social-links">
+                        {{-- <div class="footer-social-links">
                             <ul>
                                 <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
                                 <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
                                 <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
                                 <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>                                                                
                             </ul>
-                        </div>
+                        </div> --}}
                         <!-- Footer Social Links End -->
                         
                     </div>
                     <!-- About Footer End -->
                 </div>
                 
-                <div class="col-lg-2 col-md-3 col-6">
+                <div class="col-lg-2 col-md-6 col-6">
                     <!-- About Links Start -->
                     <div class="footer-links">
-                        <h3>quick links</h3>
+                        <h3>Liens rapides</h3>
                         <ul>
-                            <li><a href="#">home</a></li>
-                            <li><a href="#">our chruch</a></li>
-                            <li><a href="#">services</a></li>
-                            <li><a href="#">event</a></li>
-                            <li><a href="#">news</a></li>
+                            <li><a href="{{ route('acceuil') }}">Accueil</a></li>
+                            <li><a href="{{ route('doyennes') }}">Doyennés</a></li>
+                            <li><a href="{{ route('paroisses') }}">Paroisses</a></li>
+                            <li><a href="{{ route('activites') }}">Activités</a></li>
+                            <li><a href="{{ route('ressources') }}">Ressources</a></li>
+                            <li><a href="{{ route('galleriephoto') }}">Galerie</a></li>
                         </ul>
                     </div>
                     <!-- About Links End -->
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-6">
+                {{-- <div class="col-lg-3 col-md-4 col-6">
                     <!-- About Links Start -->
                     <div class="footer-links">
                         <h3>our services</h3>
@@ -57,9 +62,9 @@
                         </ul>
                     </div>
                     <!-- About Links End -->
-                </div>
+                </div> --}}
 
-                <div class="col-lg-3 col-md-5">
+                <div class="col-lg-6 col-md-6">
                     <!-- About Links Start -->
                     <div class="footer-contact">
                         <h3>contact</h3>
@@ -68,10 +73,12 @@
                             <!-- Footer Info Box Start -->
                             <div class="footer-info-box">
                                 <div class="icon-box">
-                                    <img src="images/icon-phone.svg" alt="">
+                                    <img src="{{ asset('asset_frontend/images/icon-phone.svg') }}" alt="">
                                 </div>
                                 <div class="footer-info-box-content">
-                                    <p>(+0) 789 345 012</p>
+                                    <p>(+243) 824 500 018| 990 378 202</p>
+                                    <p>(+243) 995764961| 0819469877</p>
+                                    {{-- « croisadeeucharistique.diocese.goma@gmail.com » --}}
                                 </div>                                
                             </div>
                             <!-- Footer Info Box End -->
@@ -79,10 +86,10 @@
                             <!-- Footer Info Box Start -->
                             <div class="footer-info-box">
                                 <div class="icon-box">
-                                    <img src="images/icon-mail.svg" alt="">
+                                    <img src="{{ asset('asset_frontend/images/icon-mail.svg') }}" alt="">
                                 </div>
                                 <div class="footer-info-box-content">
-                                    <p>domain@gmail.com</p>
+                                    <p>croisadeeucharistique.diocese.goma@gmail.com</p>
                                 </div>
                             </div>
                             <!-- Footer Info Box End -->
@@ -90,10 +97,10 @@
                             <!-- Footer Info Box Start -->
                             <div class="footer-info-box">
                                 <div class="icon-box">
-                                    <img src="images/icon-location.svg" alt="">
+                                    <img src="{{ asset('asset_frontend/images/icon-location.svg') }}" alt="">
                                 </div>
                                 <div class="footer-info-box-content">
-                                    <p>24/11 Robert Road,New York,USA</p>
+                                    <p>RDC-NordKivu-Goma</p>
                                 </div>                                
                             </div>
                             <!-- Footer Info Box End -->
@@ -107,23 +114,41 @@
             <!-- Footer Copyright Section Start -->
             <div class="footer-copyright">
                 <div class="row align-items-center">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-lg-4 col-md-4">
                         <!-- Footer Copyright Start -->
                         <div class="footer-copyright-text">
-                            <p>Copyright 2024 Avenix. All Rights Reserved.</p>
+                            <p>Copyright @php
+                            echo date('Y');
+                            @endphp Croisade Eucharistique. Tout droit réservé.</p>
                         </div>
                         <!-- Footer Copyright End -->
                     </div>
 
-                    <div class="col-lg-6 col-md-6">
-                        <!-- Footer Social Link Start -->
-                        <div class="footer-privacy-policy">
-                            <ul>
-                                <li><a href="#">term & condition</a></li>
-                                <li><a href="#">support</a></li>
-                                <li><a href="#">privacy policy</a></li>
-                            </ul>
-                        </div>
+                    <div class="col-lg-8 col-md-8">
+                <!-- Footer Social Link Start -->
+<div class="footer-privacy-policy">
+    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 20px; font-size: 14px; color: #666; padding: 15px 0;">
+        <li style="display: flex; align-items: center; gap: 5px;">
+            <i class="fas fa-code" style="color: #888;"></i>
+            <span style="color: #888;">Développé par</span>
+        </li>
+        <li style="display: flex; align-items: center; gap: 8px;">
+            <a href="#" style="text-decoration: none; color: #2c5530; font-weight: 600; transition: color 0.3s;">
+                Gracieux Sikuly
+            </a>
+            <span style="color: #666; font-size: 12px; display: flex; align-items: center; gap: 5px;">
+                <i class="fas fa-cross"></i>
+                Apostolat Croisé & Vis Zelateur Diocésain
+            </span>
+        </li>
+        <li style="display: flex; align-items: center; gap: 5px;">
+            <a href="tel:+243990378202" style="text-decoration: none; color: #2c5530; display: flex; align-items: center; gap: 5px; transition: color 0.3s;">
+                <i class="fas fa-phone-alt"></i>
+                +243 990 378 202
+            </a>
+        </li>
+    </ul>
+</div>
                         <!-- Footer Social Link End -->
                     </div>
                 </div>
