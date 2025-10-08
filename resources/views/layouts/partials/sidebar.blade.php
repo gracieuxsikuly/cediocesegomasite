@@ -89,6 +89,12 @@
             <span key="t-chat">Contacts</span>
         </a>
     </li>
+     <li>
+        <a href="{{ route('countmembers') }}" class="waves-effect">
+            <i class="bx bx-message"></i>
+            <span key="t-chat">Count Members</span>
+        </a>
+    </li>
 </ul>
     </div>
     <!-- Sidebar -->

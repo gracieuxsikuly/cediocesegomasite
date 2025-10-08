@@ -12,6 +12,7 @@ use App\Livewire\Backend\PhotovideoCrud;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Backend\NiyaMwezi;
 use App\Livewire\Backend\Contacts;
+use App\Livewire\Backend\Countmembers;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -54,5 +55,8 @@ Route::middleware([
        ->name('niamwezis');   
     Route::get('/contacts', Contacts::class)
        ->middleware('role:admin,user')
-       ->name('contacts');
+       ->name('contacts');       
+       Route::get('/countmembers', Countmembers::class)
+       ->middleware('role:admin,user')
+       ->name('countmembers');
 });

@@ -14,11 +14,11 @@ return new class extends Migration
         Schema::create('countmembers', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->integer('count-croisillons');
-            $table->integer('count-feunouveau');
-            $table->integer('count-cadets');
-            $table->integer('count-equap');
-            $table->date('annee');
+            $table->integer('count_croisillons');
+            $table->integer('count_feunouveau');
+            $table->integer('count_cadets');
+            $table->integer('count_equap');
+            $table->integer('annee');
         });
     }
 
