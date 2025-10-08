@@ -135,8 +135,35 @@
                                     </div>
                                 </div>
                             </div>
-                            
-                            <div class="row">
+
+                              <div class="row">
+                             <div class="col-md-6">
+                                    <label for="lienfichier" class="form-label">Fichier</label>
+                                        <input type="file" class="form-control" id="lienfichier" wire:model.live="lienfichier">
+                                        @error('lienfichier')
+                                        <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                        @if($lienfichier)
+                                            <small class="text-muted">Fichier sélectionné: {{ $lienfichier->getClientOriginalName() }}</small>
+                                        @endif
+                                </div>
+                                 <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="formatressource" class="form-label">Format de la ressource</label>
+                                        <select class="form-control" id="formatressource" wire:model="formatressource">
+                                            <option value="">Sélectionnez un type</option>
+                                          <option value="audio">Audio</option>
+                                          <option value="pdf">Pdf</option>
+                                          <option value="video">Video</option>
+                                          <option value="image">Image</option>
+                                        </select>
+                                        @error('formatressource')
+                                        <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                </div>
+                              </div>
+                               <div class="row">
                                 <div class="col-md-12">
                                     <div class="mb-3">
                                         <label for="typeressource" class="form-label">Type de ressource <span class="text-danger">*</span></label>
@@ -152,18 +179,6 @@
                                     </div>
                                 </div>
                             </div>
-                              <div class="row">
-                             <div class="col-md-12">
-                                    <label for="lienfichier" class="form-label">Fichier</label>
-                                        <input type="file" class="form-control" id="lienfichier" wire:model.live="lienfichier">
-                                        @error('lienfichier')
-                                        <span class="text-danger">{{ $message }}</span>
-                                        @enderror
-                                        @if($lienfichier)
-                                            <small class="text-muted">Fichier sélectionné: {{ $lienfichier->getClientOriginalName() }}</small>
-                                        @endif
-                                </div>
-                              </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>

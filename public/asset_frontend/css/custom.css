@@ -1771,7 +1771,7 @@ header.main-header .header-sticky.active{
 /************************************/
 
 .verse-church{
-	background: var(--secondary-color) url('../images/verse-church-bg.png') no-repeat;
+	background: var(--secondary-color) url('../images/verse-church-bgb.png') no-repeat;
 	background-position: right center;
 	background-size: contain;
 	padding: 100px 0;
@@ -1959,7 +1959,7 @@ header.main-header .header-sticky.active{
 /************************************/
 
 .donate-now{
-	background: url('../images/donate-now-bg.jpg') no-repeat;
+	background: url('../images/donate-now-bg.png') no-repeat;
 	background-position: center center;
 	background-size: cover;
 	padding: 100px 0;

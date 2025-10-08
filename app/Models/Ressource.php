@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Ressource extends Model
 {
-    protected $fillable = ['titre', 'description', 'typeressource','file'];
+    protected $fillable = ['titre', 'description', 'typeressource','file','formatressource'];
 }

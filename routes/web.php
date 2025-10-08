@@ -19,6 +19,7 @@ use App\Livewire\Frontend\DoyenneLivewire;
 use App\Livewire\Frontend\GalerieLivewire;
 use App\Livewire\Frontend\AboutLivewire;
 use App\Livewire\Frontend\RessourceLivewire;
+use App\Livewire\Frontend\Detailactivite;
 
 Route::get('/', function () {
     return redirect()->route('acceuil');
@@ -71,5 +72,5 @@ Route::get('/acceuil', Index::class)->name('acceuil');
       Route::get('/nos-ressources',RessourceLivewire::class)->name('ressources');
        Route::get('/notre-gallerie-photo',GalerieLivewire::class)->name('galleriephoto');
    Route::get('/contact',ContactLivewire::class)->name('contact');
-//     Route::get('/detail-activite/{slug}',DetailActivite::class)->name('detail-activite');
+Route::get('/detail-activite/{slug}',Detailactivite::class)->name('detailactivite');
 

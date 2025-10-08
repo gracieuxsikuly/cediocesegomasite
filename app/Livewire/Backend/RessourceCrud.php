@@ -17,6 +17,7 @@ class RessourceCrud extends Component
     public $editMode = false;
     public $ressourceId;
      public $lienfichier = null;
+     public $formatressource;
 
     // Champs du formulaire
     public $titre = '';
@@ -71,6 +72,7 @@ class RessourceCrud extends Component
             'description' => $this->description,
             'typeressource' => $this->typeressource,
             'file' => $filePath ?? null,
+            'formatressource'=>$this->formatressource
         ]);
 
         $this->resetForm();
@@ -85,7 +87,7 @@ class RessourceCrud extends Component
         $this->ressourceId = $id;
         $this->titre = $ressource->titre;
         $this->description = $ressource->description;
-        $this->typeressource = $ressource->typeressource;
+        $this->formatressource = $ressource->formatressource;
         $this->editMode = true;
         $this->dispatch('openModal');
     }
@@ -99,6 +101,7 @@ class RessourceCrud extends Component
             'titre' => $this->titre,
             'description' => $this->description,
             'typeressource' => $this->typeressource,
+            'formatressource'=>$this->formatressource
         ]);
         // Gestion du fichier uploadé
         if ($this->lienfichier) {

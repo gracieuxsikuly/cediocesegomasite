@@ -4,6 +4,8 @@ namespace App\Livewire\Frontend;
 
 use Livewire\Component;
 use App\Models\Niamwezi;
+use App\Models\Activiteprogramme;
+use App\Models\Ressource;
 class Index extends Component
 {
     public $mois;
@@ -21,6 +23,11 @@ public function mount()
     }
     public function render()
     {
-        return view('livewire.frontend.index')->layout('layouts.defaultfrontend', ['title' => 'Accueil']);
+        $activities=Activiteprogramme::where('statut','effectif')->orderBy('dateactivite','DESC')->take(3)->get();
+        $resources= Ressource::orderBy('created_at','DESC')->take(3)->get();
+        return view('livewire.frontend.index',[
+            'activities'=>$activities,
+            'resources'=>$resources,
+        ])->layout('layouts.defaultfrontend', ['title' => 'Accueil']);
     }
 }
