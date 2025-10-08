@@ -50,7 +50,7 @@
                             </div>
                             <div class="col-sm-6">
                                 <div class="text-sm-end d-none d-sm-block">
-                                    Develop by Gsikuly | Apostolat Croisé et Vis Zélateur Diocésain
+                                    Develop by Gsikuly | Apostolat Croisé et Zélateur Diocésain
                                 </div>
                             </div>
                         </div>

@@ -34,6 +34,7 @@
 	<link rel="stylesheet" href="{{asset('asset_frontend/css/plyr.css')}}">
 	<!-- Main Custom Css -->
 	<link href="{{asset('asset_frontend/css/custom.css')}}" rel="stylesheet" media="screen">
+    @stack('styles')
 </head>
 <body>
 

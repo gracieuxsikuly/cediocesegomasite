@@ -140,7 +140,7 @@ l’action catholique.
             </a>
             <span style="color: #666; font-size: 12px; display: flex; align-items: center; gap: 5px;">
                 <i class="fas fa-cross"></i>
-                Apostolat Croisé & Vis Zelateur Diocésain
+                Apostolat Croisé & Zelateur Diocésain
             </span>
         </li>
         <li style="display: flex; align-items: center; gap: 5px;">
