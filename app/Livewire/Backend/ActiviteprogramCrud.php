@@ -32,6 +32,8 @@ class ActiviteprogramCrud extends Component
     public $doyenne_id = '';
     public $paroisse_id = '';
     public $slug = '';
+    public $start_time = '';
+    public $end_time = '';
         public $paroisses = [];
 
     protected $rules = [
@@ -45,6 +47,8 @@ class ActiviteprogramCrud extends Component
         'image3' => 'nullable|image|mimes:jpg,jpeg,png,gif|max:2048',
         'doyenne_id' => 'nullable|exists:doyennes,id',
         'paroisse_id' => 'nullable|exists:paroisses,id',
+        'start_time' => 'nullable|date_format:H:i',
+        'end_time' => 'nullable|date_format:H:i|after_or_equal:start_time',
     ];
 
     public function updatedTitre($value)
@@ -92,6 +96,8 @@ class ActiviteprogramCrud extends Component
             'typeactivite' => $this->typeactivite,
             'doyenne_id' => $this->doyenne_id,
             'paroisse_id' => $this->paroisse_id,
+            'start_time' => $this->start_time,
+            'end_time' => $this->end_time,
             'slug' => $this->slug ?: Str::slug($this->titre),
         ];
 
@@ -134,6 +140,8 @@ class ActiviteprogramCrud extends Component
         $this->doyenne_id = $activite->doyenne_id;
         $this->paroisse_id = $activite->paroisse_id;
         $this->slug = $activite->slug;
+        $this->start_time = $activite->start_time;
+        $this->end_time = $activite->end_time;
 
         $this->editMode = true;
         $this->dispatch('openModal');
@@ -154,6 +162,8 @@ class ActiviteprogramCrud extends Component
             'doyenne_id' => $this->doyenne_id,
             'paroisse_id' => $this->paroisse_id,
             'slug' => $this->slug ?: Str::slug($this->titre),
+            'start_time' => $this->start_time,
+            'end_time' => $this->end_time,
         ];
 
         // Gestion des images uploadées

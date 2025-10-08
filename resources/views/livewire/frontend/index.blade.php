@@ -297,14 +297,14 @@ eucharistique</p>
                     <div class="counter-item">
                         <!-- Counter Title Start -->
                         <div class="counter-title">
-                            <h2><span class="counter">350</span>+</h2>
+                            <h2><span class="counter">1500</span>+</h2>
                         </div>
                         <!-- Counter Title End -->                     
 
                         <!-- Counter Content Start -->
                         <div class="counter-content">
-                            <h3>oldest member</h3>
-                            <p>Our oldest member is Mary Thompson, who is 95 years old and has been attending since 1945.</p>
+                            <h3>Croisillons</h3>
+                            <p>sur 6300 croises du Diocese de Goma</p>
                         </div>
                         <!-- Counter Content End -->
                     </div>
@@ -316,14 +316,14 @@ eucharistique</p>
                     <div class="counter-item">
                         <!-- Counter Title Start -->
                         <div class="counter-title">
-                            <h2><span class="counter">98</span>+</h2>
+                            <h2><span class="counter">2000</span>+</h2>
                         </div>
                         <!-- Counter Title End -->                     
 
                         <!-- Counter Content Start -->
                         <div class="counter-content">                            
-                            <h3>youth retreats</h3>
-                            <p>Our oldest member is Mary Thompson, who is 95 years old and has been attending since 1945.</p>
+                            <h3>Feux nouveaux</h3>
+                            <p>sur 6300 croises du Diocese de Goma</p>
                         </div>
                         <!-- Counter Content End -->
                     </div>
@@ -335,14 +335,14 @@ eucharistique</p>
                     <div class="counter-item">
                         <!-- Counter Title Start -->
                         <div class="counter-title">
-                            <h2><span class="counter">148</span>+</h2>                            
+                            <h2><span class="counter">1800</span>+</h2>                            
                         </div>
                         <!-- Counter Title End -->                     
 
                         <!-- Counter Content Start -->
                         <div class="counter-content">
-                            <h3>tech workshops</h3>
-                            <p>Our oldest member is Mary Thompson, who is 95 years old and has been attending since 1945.</p>
+                            <h3>Cadet(te)s</h3>
+                           <p>sur 6300 croises du Diocese de Goma</p>
                         </div>
                         <!-- Counter Content End -->
                     </div>
@@ -354,14 +354,14 @@ eucharistique</p>
                     <div class="counter-item">
                         <!-- Counter Title Start -->
                         <div class="counter-title">
-                            <h2><span class="counter">58</span>+</h2>
+                            <h2><span class="counter">1000</span>+</h2>
                         </div>
                         <!-- Counter Title End -->                     
 
                         <!-- Counter Content Start -->
                         <div class="counter-content">
-                            <h3>christmas concert</h3>
-                            <p>Our oldest member is Mary Thompson, who is 95 years old and has been attending since 1945.</p>
+                            <h3>Equaps</h3>
+                           <p>sur 6300 croises du Diocese de Goma</p>
                         </div>
                         <!-- Counter Content End -->
                     </div>
@@ -380,8 +380,8 @@ eucharistique</p>
             <div class="row section-row">
                 <!-- Section Title Start -->
                 <div class="section-title">
-                    <h3 class="wow fadeInUp">services</h3>
-                    <h2 class="text-anime-style-2" data-cursor="-opaque">Loving god, helping others and serving the <span>world together</span></h2>
+                    {{-- <h3 class="wow fadeInUp">LES ENGAGEMENTS(MAAGANO)</h3> --}}
+                    <h2 class="text-anime-style-2" data-cursor="-opaque">LES ENGAGEMENTS(MAAGANO)<span></span></h2>
                 </div>
                 <!-- Section Title End -->
             </div>
@@ -398,14 +398,21 @@ eucharistique</p>
 
                         <!-- Service Body Start -->
                         <div class="service-body">
-                            <p>Compassionate support for grief, relationships, and personal struggles. Join our monthly groups or schedule counseling.</p>
+                            <p style="text-align: justify;">
+                        Ibada ya ahadi ya kupokelewa kama mwanamemba mpya wa C.E inaanza na wimbo wa  <b>( veni creator)</b> na kumalizika na <b>( hymne : je suis croise)</b>. Inafanyika ndani ya ibada ya missa takatifu, kiisha homelia ya padri, kwani  
+« mbali ya kanisa hakuna wokovu wowote »  ( mtakatifu Augistino ) 
+Ibada hii inaelekea wanamemba wapya ( bila tafauti ya mikasama) ambamo wame kwisha kuonesha ushunjaa wao na kuhuzuria kama desturi 
+mafundisho ya kuelekea kawaida ya chama, ikiwezekana, muda ya myezi sita.
+ Ndiyo kusema Ibada hii ya weza ku fanyika tu mara mbili kwa mwaka katika parokia, secteur, ao sous-secteur fulani fulani. 
+
+                            </p>
                         </div>
                         <!-- Service Body End -->
 
                         <!-- Service Footer Start -->
                         <div class="service-footer">
                             <div class="service-content">
-                                <h3>support groups</h3>
+                                <h3>Aspirant croisé(kukopelewa upya)</h3>
                             </div>
                             <div class="service-btn">
                                 <a href="#" class="readmore-btn"><img src="{{asset('asset_frontend/images/arrow-white.svg')}}" alt=""></a>
@@ -427,14 +434,19 @@ eucharistique</p>
 
                         <!-- Service Body Start -->
                         <div class="service-body">
-                            <p>Join us for special events, including holiday services, picnics, and community fundraisers throughout the year.</p>
+                            <p style="text-align: justify;">Ibada ya ahadi ya kupewa daraja la umiliki inaanza na wimbo wa
+                                <b>kuomba nguvu ya Roho Mtakatifu</b> na kumalizika na hymne <b>“Debout fils de l’Eglise”</b>
+Ibada hii ni matengeneo ambayo hupatia mpenzi wa Ukaristia umiliki wa kupewa madaraka ya uongozi ndani ya mkasama moja. Shabaa kubwa ni kwamba waongozi hawa wafikie hali ya kujenga ushirikiano ao uhusiano bora na utengeneo wa kweli ndani ya chama cha Croisade Eucharistique ;  hasa kusaidia kufasiriya wanamemba wote mambo yanayo unda samani yetu kama, kwa Eklezia, moja na vyama vilivyo shamba la miche kwa mwito mbali mbali.
+ 
+	Ibada hii, inatolewa vile ndani ya ibada ya Misa Takatifu kiisha Homelia ya Padri 
+</p>
                         </div>
                         <!-- Service Body End -->
 
                         <!-- Service Footer Start -->
                         <div class="service-footer">
                             <div class="service-content">
-                                <h3>special events</h3>
+                                <h3>Feu Aspirant croisé(daraja la umiliki)</h3>
                             </div>
                             <div class="service-btn">
                                 <a href="#" class="readmore-btn"><img src="{{asset('asset_frontend/images/arrow-white.svg')}}" alt=""></a>
@@ -456,14 +468,25 @@ eucharistique</p>
 
                         <!-- Service Body Start -->
                         <div class="service-body">
-                            <p>Join our online services for live streams of Sunday worship, virtual Bible studies, and interactive prayer meetings from anywhere.</p>
+                            <p style="text-align: justify;">Ibada hii inaanza na wimbo wa <b>« zaburi 115 »</b> na kumalizika na <b>« hymne de la promesse »</b>
+Inafanyika ndani ya misa takatifu, Kiisha Komunio na yalazimisha Sacramenta ya Ukaristia takatifu.
+ Ahadi ya ibada hii inatambulisha vema mpenzi wa Ukaristia katika uito wake wa pekee,
+ambamo:
+- Anatolea maisha yake yote kwa kuiunganisha na sadaka ya Yesu Kristu kwa ajili ya wokovu wa
+dunia nzima;
+- Anahaidia uaminifu ndani ya Chama cha Wapenzi wa Ukaridtia na kushika mapashwa yake:
+Sala, Sadaka, Komunio na Kitume.
+- Anajikusudia kujitolea bila kuchoka kwa ajili ya Wapenzi wote;
+- Anajikusuida pia kupenda Misa, kufwata Misa na kuishi Misa; kuabudu Ukaristia takatifu,
+kupenda na kuheshimu Mama Bikira Maria, Malkia wa Croisade Eucharistia.
+</p>
                         </div>
                         <!-- Service Body End -->
 
                         <!-- Service Footer Start -->
                         <div class="service-footer">
                             <div class="service-content">
-                                <h3>online services</h3>
+                                <h3>Apostolat croisé(Ahadi Ya Kuagania Uaminifu Kwa Moyo Mtakatifu Wa Yesu Na Moyo Safi Wa Bikira Maria Ndani Ya Chama)</h3>
                             </div>
                             <div class="service-btn">
                                 <a href="#" class="readmore-btn"><img src="{{asset('asset_frontend/images/arrow-white.svg')}}" alt=""></a>
@@ -485,14 +508,24 @@ eucharistique</p>
 
                         <!-- Service Body Start -->
                         <div class="service-body">
-                            <p>Receive compassionate pastoral care through one-on-one counseling  and  visits, addressing spiritual needs and personal challenges with care.</p>
+                            <p style="text-align: justify;"> Ibada hii inaanza na wimbo wa <b>« zaburi 115 »</b> na kumalizika na <b>« hymne de la promesse »</b>
+Inafanyika ndani ya misa takatifu, Kiisha Komunio na yalazimisha Sacramenta ya Ukaristia takatifu.
+ Ahadi ya ibada hii inatambulisha vema mpenzi wa Ukaristia katika uito wake wa pekee,
+ambamo:
+- Anatolea maisha yake yote kwa kuiunganisha na sadaka ya Yesu Kristu kwa ajili ya wokovu wa
+dunia nzima;
+- Anahaidia uaminifu ndani ya Chama cha Wapenzi wa Ukaridtia na kushika mapashwa yake:
+Sala, Sadaka, Komunio na Kitume.
+- Anajikusudia kujitolea bila kuchoka kwa ajili ya Wapenzi wote;
+- Anajikusuida pia kupenda Misa, kufwata Misa na kuishi Misa; kuabudu Ukaristia takatifu,
+kupenda na kuheshimu Mama Bikira Maria, Malkia wa Croisade Eucharistia.</p>
                         </div>
                         <!-- Service Body End -->
 
                         <!-- Service Footer Start -->
                         <div class="service-footer">
                             <div class="service-content">
-                                <h3>pastoral care</h3>
+                                <h3>Feu Apostolat, Chevalier du Christ et Vrai soldat du Christ</h3>
                             </div>
                             <div class="service-btn">
                                 <a href="#" class="readmore-btn"><img src="{{asset('asset_frontend/images/arrow-white.svg')}}" alt=""></a>
@@ -512,19 +545,18 @@ eucharistique</p>
 		<div class="scrolling-ticker">
             <div class="scrolling-ticker-box">
                 <div class="scrolling-content">
-                    <span><img src="{{asset('asset_frontend/images/icon-asterisk.svg')}}" alt="">Hope Of All</span>					
-                    <span><img src="{{asset('asset_frontend/images/icon-asterisk.svg')}}" alt="">Hope Of All</span>				
-                    <span><img src="{{asset('asset_frontend/images/icon-asterisk.svg')}}" alt="">Hope Of All</span>				
-                    <span><img src="{{asset('asset_frontend/images/icon-asterisk.svg')}}" alt="">Hope Of All</span>				
-                    <span><img src="{{asset('asset_frontend/images/icon-asterisk.svg')}}" alt="">Hope Of All</span>				
+                    <span><img src="{{asset('asset_frontend/images/icon-asterisk.svg')}}" alt="">L'adoration</span>					
+                    <span><img src="{{asset('asset_frontend/images/icon-asterisk.svg')}}" alt="">Notre devise</span>				
+                    <span><img src="{{asset('asset_frontend/images/icon-asterisk.svg')}}" alt="">Le foulard</span>				
+                    <span><img src="{{asset('asset_frontend/images/icon-asterisk.svg')}}" alt="">Notre drapeau</span>				
+                    <span><img src="{{asset('asset_frontend/images/icon-asterisk.svg')}}" alt="">Avec le Christ</span>				
                 </div>
 
                 <div class="scrolling-content">
-                    <span><img src="{{asset('asset_frontend/images/icon-asterisk.svg')}}" alt="">Hope Of All</span>					
-                    <span><img src="{{asset('asset_frontend/images/icon-asterisk.svg')}}" alt="">Hope Of All</span>				
-                    <span><img src="{{asset('asset_frontend/images/icon-asterisk.svg')}}" alt="">Hope Of All</span>				
-                    <span><img src="{{asset('asset_frontend/images/icon-asterisk.svg')}}" alt="">Hope Of All</span>				
-                    <span><img src="{{asset('asset_frontend/images/icon-asterisk.svg')}}" alt="">Hope Of All</span>
+                    <span><img src="{{asset('asset_frontend/images/icon-asterisk.svg')}}" alt="">Rien n'est impossible</span>					
+                    <span><img src="{{asset('asset_frontend/images/icon-asterisk.svg')}}" alt="">Dieu le veux</span>				
+                    <span><img src="{{asset('asset_frontend/images/icon-asterisk.svg')}}" alt="">Toujours plus</span>				
+                    <span><img src="{{asset('asset_frontend/images/icon-asterisk.svg')}}" alt="">Toujours mieux</span>				
                 </div>
             </div>
         </div>
@@ -533,138 +565,36 @@ eucharistique</p>
 
     <!-- Our Ministries Section Start -->
     <div class="our-ministries">
-        <div class="container">
+         <div class="container">
             <div class="row section-row">
                 <!-- Section Title Start -->
                 <div class="section-title">
-                    <h3 class="wow fadeInUp">ministries</h3>
-                    <h2 class="text-anime-style-2" data-cursor="-opaque">Our Latest <span>Ministries</span></h2>
+                    <h3 class="wow fadeInUp"> Activités</h3>
+                    <h2 class="text-anime-style-2" data-cursor="-opaque">Nos Recentes<span> Activites</span></h2>
                 </div>
                 <!-- Section Title End -->
             </div>
 
             <div class="row">
-                <div class="col-md-4">
-                    <!-- Ministries Item Start -->
-                    <div class="ministries-item wow fadeInUp">
-                        <!-- Ministries Image Start -->
-                        <div class="ministries-image" data-cursor-text="View">
-                            <a href="#">
-                                <figure>
-                                    <img src="{{asset('asset_frontend/images/ministries-img-1.jpg')}}" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <!-- Ministries Image End -->
-
-                        <!-- Ministries Content Start -->
-                        <div class="ministries-content">
-                            <h3>Children's</h3>
-                        </div>
-                        <!-- Ministries Content End -->
-
-                        <!-- Ministries Btn Start -->
-                        <div class="ministries-btn">
-                            <a href="#" class="readmore-btn"><img src="{{asset('asset_frontend/images/arrow-white.svg')}}" alt=""></a>
-                        </div>
-                        <!-- Ministries Btn End -->
-                    </div>
-                    <!-- Ministries Item End -->
-                </div>
-
-                <div class="col-md-4">
-                    <!-- Ministries Item Start -->
-                    <div class="ministries-item wow fadeInUp" data-wow-delay="0.25s">
-                        <!-- Ministries Image Start -->
-                        <div class="ministries-image" data-cursor-text="View">
-                            <a href="#">
-                                <figure>
-                                    <img src="{{asset('asset_frontend/images/ministries-img-2.jpg')}}" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <!-- Ministries Image End -->
-
-                        <!-- Ministries Content Start -->
-                        <div class="ministries-content">
-                            <h3>youth</h3>
-                        </div>
-                        <!-- Ministries Content End -->
-
-                        <!-- Ministries Btn Start -->
-                        <div class="ministries-btn">
-                            <a href="#" class="readmore-btn"><img src="{{asset('asset_frontend/images/arrow-white.svg')}}" alt=""></a>
-                        </div>
-                        <!-- Ministries Btn End -->
-                    </div>
-                    <!-- Ministries Item End -->
-                </div>
-
-                <div class="col-md-4">
-                    <!-- Ministries Item Start -->
-                    <div class="ministries-item wow fadeInUp" data-wow-delay="0.5s">
-                        <!-- Ministries Image Start -->
-                        <div class="ministries-image" data-cursor-text="View">
-                            <a href="#">
-                                <figure>
-                                    <img src="{{asset('asset_frontend/images/ministries-img-3.jpg')}}" alt="">
-                                </figure>
-                            </a>
-                        </div>
-                        <!-- Ministries Image End -->
-
-                        <!-- Ministries Content Start -->
-                        <div class="ministries-content">
-                            <h3>prayer</h3>
-                        </div>
-                        <!-- Ministries Content End -->
-
-                        <!-- Ministries Btn Start -->
-                        <div class="ministries-btn">
-                            <a href="#" class="readmore-btn"><img src="{{asset('asset_frontend/images/arrow-white.svg')}}" alt=""></a>
-                        </div>
-                        <!-- Ministries Btn End -->
-                    </div>
-                    <!-- Ministries Item End -->
-                </div>
-
-                <div class="col-lg-12">
-                    <div class="our-ministries-footer wow fadeInUp" data-wow-delay="0.75s">
-                        <p>Explore the exciting new ways we are serving our community and growing together in faith with our latest ministry initiatives. <a href="#">View All Ministries</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Our Ministries Section End -->
-
-    <!-- Our Sermons Section Start -->
-    <div class="our-sermons">
-        <div class="container">
-            <div class="row section-row">
-                <!-- Section Title Start -->
-                <div class="section-title">
-                    <h3 class="wow fadeInUp">our sermons</h3>
-                    <h2 class="text-anime-style-2" data-cursor="-opaque">Our Latest <span>Sermons</span></h2>
-                </div>
-                <!-- Section Title End -->
-            </div>
-
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
+                @forelse ($activities as $activity)
+                     <div class="col-lg-4 col-md-6">
                     <!-- Sermons Item Start -->
                     <div class="sermons-item wow fadeInUp">
                         <!-- Sermons Image Start -->
                         <div class="sermons-image">
                             <figure>
                                 <a href="#" class="image-anime" data-cursor-text="View">
-                                    <img src="{{asset('asset_frontend/images/sermons-img-1.jpg')}}" alt="">
+                                    <img src="{{ asset('storage/' . $activity->image1) }}" alt="">
                                 </a>
                             </figure>
                             <!-- Sermons Meta Start -->
                             <div class="sermons-meta">
-                                <h3>03</h3>
-                                <p>aug</p>
+                                @php
+                                    $date = \Carbon\Carbon::parse($activity->dateactivite);
+                                @endphp
+
+                                <h3>{{ $date->format('d') }}</h3>
+                                <p>{{ $date->translatedFormat('F') }}</p>
                             </div>
                             <!-- Sermons Meta End -->
 
@@ -678,16 +608,16 @@ eucharistique</p>
                         <div class="sermons-body">
                             <!-- Sermons Title Start -->
                             <div class="sermons-title">
-                                <h2>Start a New Way of Living</h2>
+                                <h2>{{ $activity->titre }}</h2>
                             </div>
                             <!-- Sermons Title End -->
 
                             <!-- Sermons List Start -->
                             <div class="sermons-list">
                                 <ul>
-                                    <li><i class="fa-solid fa-user"></i>Sermon From : <span>John Due</span></li>
-                                    <li><i class="fa-solid fa-tag"></i>Categories : <span>Pray</span></li>
-                                    <li><i class="fa-regular fa-calendar-days"></i>Date & Time : <span>Aug 03 - on 7:00 am - 11:00 am</span></li>
+                                    <li><i class="fa-solid fa-user"></i>Lieu : <span>{{ $activity->emplacement }}</span></li>
+                                    <li><i class="fa-solid fa-tag"></i>Categories : <span>{{ $activity->typeactivite }}</span></li>
+                                    <li><i class="fa-regular fa-calendar-days"></i>Date & Heure : <span>{{ $date->translatedFormat('F') }} {{ $date->format('d') }} - on {{ $activity->start_time }} - {{ $activity->end_time }}</span></li>
                                 </ul>
                             </div>
                             <!-- Sermons List End -->
@@ -696,102 +626,16 @@ eucharistique</p>
                     </div>
                     <!-- Sermons Item End -->
                 </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <!-- Sermons Item Start -->
-                    <div class="sermons-item wow fadeInUp" data-wow-delay="0.25s">
-                        <!-- Sermons Image Start -->
-                        <div class="sermons-image">
-                            <figure>
-                                <a href="#" class="image-anime" data-cursor-text="View">
-                                    <img src="{{asset('asset_frontend/images/sermons-img-2.jpg')}}" alt="">
-                                </a>
-                            </figure>
-                            <!-- Sermons Meta Start -->
-                            <div class="sermons-meta">
-                                <h3>03</h3>
-                                <p>aug</p>
-                            </div>
-                            <!-- Sermons Meta End -->
-
-                            <div class="sermons-audio-icon">
-                                <a href="#"><img src="{{asset('asset_frontend/images/audio-play-icon.svg')}}" alt=""></a>
-                            </div>
-                        </div>
-                        <!-- Sermons Image End -->
-
-                        <!-- Sermons Body Start -->
-                        <div class="sermons-body">
-                            <!-- Sermons Title Start -->
-                            <div class="sermons-title">
-                                <h2>overcoming life's challenges</h2>
-                            </div>
-                            <!-- Sermons Title End -->
-
-                            <!-- Sermons List Start -->
-                            <div class="sermons-list">
-                                <ul>
-                                    <li><i class="fa-solid fa-user"></i>Sermon From : <span>John Due</span></li>
-                                    <li><i class="fa-solid fa-tag"></i>Categories : <span>Pray</span></li>
-                                    <li><i class="fa-regular fa-calendar-days"></i>Date & Time : <span>Aug 03 - on 7:00 am - 11:00 am</span></li>
-                                </ul>
-                            </div>
-                            <!-- Sermons List End -->
-                        </div>
-                        <!-- Sermons Body End -->
-                    </div>
-                    <!-- Sermons Item End -->
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <!-- Sermons Item Start -->
-                    <div class="sermons-item wow fadeInUp" data-wow-delay="0.5s">
-                        <!-- Sermons Image Start -->
-                        <div class="sermons-image">
-                            <figure>
-                                <a href="#" class="image-anime" data-cursor-text="View">
-                                    <img src="{{asset('asset_frontend/images/sermons-img-3.jpg')}}" alt="">
-                                </a>
-                            </figure>
-                            <!-- Sermons Meta Start -->
-                            <div class="sermons-meta">
-                                <h3>03</h3>
-                                <p>aug</p>
-                            </div>
-                            <!-- Sermons Meta End -->
-
-                            <div class="sermons-audio-icon">
-                                <a href="#"><img src="{{asset('asset_frontend/images/audio-play-icon.svg')}}" alt=""></a>
-                            </div>
-                        </div>
-                        <!-- Sermons Image End -->
-
-                        <!-- Sermons Body Start -->
-                        <div class="sermons-body">
-                            <!-- Sermons Title Start -->
-                            <div class="sermons-title">
-                                <h2>hope in times of trouble</h2>
-                            </div>
-                            <!-- Sermons Title End -->
-
-                            <!-- Sermons List Start -->
-                            <div class="sermons-list">
-                                <ul>
-                                    <li><i class="fa-solid fa-user"></i>Sermon From : <span>John Due</span></li>
-                                    <li><i class="fa-solid fa-tag"></i>Categories : <span>Pray</span></li>
-                                    <li><i class="fa-regular fa-calendar-days"></i>Date & Time : <span>Aug 03 - on 7:00 am - 11:00 am</span></li>
-                                </ul>
-                            </div>
-                            <!-- Sermons List End -->
-                        </div>
-                        <!-- Sermons Body End -->
-                    </div>
-                    <!-- Sermons Item End -->
-                </div>
+                @empty
+                    <p>Aucune activité pour le moment</p>
+                @endforelse
+               
             </div>
         </div>
     </div>
-    <!-- Our Sermons Section End -->
+    <!-- Our Ministries Section End -->
+
+  
 
     <!-- Verse Church Section Start -->
     <div class="verse-church">
@@ -820,99 +664,6 @@ eucharistique</p>
         </div>
     </div>
     <!-- Verse Church Section End -->
-
-    <!-- CTA Box Section Start -->
-    <div class="cta-box">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-9">
-                    <!-- CTA Box Content Start -->
-                    <div class="cta-box-content">
-                        <!-- Section Title Start -->
-                        <div class="section-title">
-                            <h2 class="text-anime-style-2" data-cursor="-opaque">Get Involved and Stay Connected: Support Our Mission and Join Our Community Today!</h2>
-                        </div>
-                        <!-- Section Title End -->
-                    </div>
-                    <!-- CTA Box Content End -->
-                </div>
-
-                <div class="col-md-3">
-                    <!-- CTA Box Btn Start -->
-                    <div class="cta-box-btn wow fadeInUp">
-                        <a href="#" class="btn-default btn-highlighted">join group</a>
-                    </div>
-                    <!-- CTA Box Btn End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- CTA Box Section End -->
-
-    <!-- Our Event Section Start -->
-    <div class="our-event">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="event-image">
-                        <figure class="image-anime reveal">
-                            <img src="{{asset('asset_frontend/images/event-image.jpg')}}" alt="">
-                        </figure>
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="event-content">
-                        <!-- Section Title Start -->
-                        <div class="section-title">
-                            <h3 class="wow fadeInUp">up coming event</h3>
-                            <h2 class="text-anime-style-2" data-cursor="-opaque">Faith and Fellowship <span>Festival</span></h2>
-                        </div>
-                        <!-- Section Title End -->
-
-                        <!-- Event Body Start -->
-                        <div class="event-body">
-                            <!-- Event Item Start -->
-                            <div class="event-item wow fadeInUp">
-                                <div class="icon-box">
-                                    <i class="fa-solid fa-calendar-days"></i>
-                                </div>
-                                <div class="event-item-content">
-                                    <p>Aug 03, 2024 - 8:00 am - 5:00 pm</p>
-                                </div>
-                            </div>
-                            <!-- Event Item End -->
-
-                            <!-- Event Item Start -->
-                            <div class="event-item wow fadeInUp" data-wow-delay="0.25s">
-                                <div class="icon-box">
-                                    <i class="fa-solid fa-location-dot"></i>
-                                </div>
-                                <div class="event-item-content">
-                                    <p>Bobst Library, 70 Washington Square South, New York</p>
-                                </div>
-                            </div>
-                            <!-- Event Item End -->
-                        </div>
-                        <!-- Event Body End -->
-
-                        <!-- Event Footer Start -->
-                        <div class="event-footer">
-                            <p class="wow fadeInUp" data-wow-delay="0.5s">The Faith and Fellowship Festival is a vibrant celebration featuring worship, community activities, and fellowship. Enjoy inspiring sermons, engaging workshops, and fun for all ages, fostering spiritual growth and connection.</p>
-                        </div>
-                        <!-- Event Footer End -->
-
-                        <!-- Event Btn Start -->
-                        <div class="event-btn wow fadeInUp" data-wow-delay="0.75s">
-                            <a href="#" class="btn-default">join in person</a>
-                        </div>
-                        <!-- Event Btn End -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Our Event Section End -->
 
     <!-- Donate Now Section Start -->
     <div class="donate-now parallaxie">
@@ -1094,37 +845,4 @@ eucharistique</p>
         </div>
     </div>
     <!-- Our Blog End -->
-
-    <!-- Subscribe Newsletter Section Start -->
-    <div class="subscribe-newsletter parallaxie">
-        <div class="container">
-            <div class="row section-row">
-                <div class="col-lg-12">
-                     <!-- Section Title Start -->
-                     <div class="section-title">
-                        <h3 class="wow fadeInUp">subscribe newsletter</h3>
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">Keep Up With Our <span>Latest News</span></h2>
-                        <p class="wow fadeInUp" data-wow-delay="0.25s">Subscribe to our newsletter to stay informed about upcoming events, inspiring messages, and the latest news from our church community.</p>
-                    </div>
-                    <!-- Section Title End -->
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <!-- Subscribe Newsletter Form Start -->
-                    <div class="subscribe-newsletter-form wow fadeInUp" data-wow-delay="0.5s">
-                        <form id="newslettersForm" action="#" method="POST">
-                            <div class="form-group">
-                                <input type="email" name="email" class="form-control"  id="mail" placeholder="Your Email..." required>
-                                <button type="submit" class="subscribe-btn">subscribe</button>
-                            </div>
-                        </form>
-                    </div>
-                    <!-- Subscribe Newsletter Form End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Subscribe Newsletter Section End -->
-
 </div>

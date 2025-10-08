@@ -9,8 +9,8 @@
         <meta name="keywords" content="Croisade Eucharistique, Mouvement catholique, Eucharistie, Enfants, Jeunes, Foi, Prière, Service, Partage, Amour, Église, Mouvement spirituel, Adoration" />
         <meta name="robots" content="index, follow">
 
-        <!-- App favicon -->
-        <link rel="shortcut icon" href="{{asset('assets_backend/images/favicon.ico')}}">
+       <!-- Favicon Icon -->
+	<link rel="shortcut icon" type="image/x-icon" href="{{ asset('asset_frontend/images/logoce.png') }}">
         <!-- Bootstrap Css -->
         <link href="{{asset('assets_backend/css/bootstrap.min.css')}}" id="bootstrap-style" rel="stylesheet" type="text/css" />
         <!-- Icons Css -->

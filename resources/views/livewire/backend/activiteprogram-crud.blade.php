@@ -35,6 +35,7 @@
                                         <th>ID</th>
                                         <th>Titre</th>
                                         <th>Date</th>
+                                        <th>Heure</th>
                                         <th>Lieu</th>
                                         <th>Type</th>
                                         <th>Images</th>
@@ -55,6 +56,13 @@
                                             @endif
                                         </td>
                                         <td>{{ \Carbon\Carbon::parse($activite->dateactivite)->format('d/m/Y') }}</td>
+                                        <td>
+                                            @if($activite->start_time && $activite->end_time)
+                                                {{ \Carbon\Carbon::parse($activite->start_time)->format('H:i') }} - {{ \Carbon\Carbon::parse($activite->end_time)->format('H:i') }}
+                                            @else
+                                                <span class="text-muted">N/A</span>
+                                            @endif
+                                        </td>
                                         <td>{{ $activite->emplacement }}</td>
                                         <td>
                                             <span class="badge bg-info">{{ $activite->typeactivite }}</span>
@@ -190,6 +198,26 @@
                                         @enderror
                                     </div>
                                 </div>
+                                 <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="start_time" class="form-label">Heure de début *</label>
+                                        <input type="time" class="form-control" id="start_time" wire:model.live="start_time">
+                                        @error('start_time')
+                                        <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="end_time" class="form-label">Heure de fin *</label>
+                                            <input type="time" class="form-control" id="end_time" wire:model.live="end_time">
+                                            @error('end_time')
+                                            <span class="text-danger">{{ $message }}</span>
+                                            @enderror
+                                        </div>
+                                    </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label for="emplacement" class="form-label">Lieu *</label>
