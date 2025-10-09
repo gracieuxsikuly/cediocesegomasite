@@ -64,7 +64,7 @@ Route::middleware([
        ->middleware('role:admin,user')
        ->name('niamwezis');
 });
-// frontend routes
+// frontend routes pour les frontend
 Route::get('/acceuil', Index::class)->name('acceuil');
  Route::get('/apropos-de-nous',AboutLivewire::class)->name('aboutus');
   Route::get('/nos-doyenne',DoyenneLivewire::class)->name('doyennes');
