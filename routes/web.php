@@ -11,6 +11,8 @@ use App\Livewire\Backend\RessourceCrud;
 use App\Livewire\Backend\PhotovideoCrud;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Backend\NiyaMwezi;
+use App\Livewire\Backend\Contacts;
+use App\Livewire\Backend\Countmembers;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -51,5 +53,20 @@ Route::middleware([
     Route::get('/niamwezis', NiyaMwezi::class)
        ->middleware('role:admin,user')
        ->name('niamwezis');
+    Route::get('/niamwezis', NiyaMwezi::class)
+       ->middleware('role:admin,user')
+       ->name('niamwezis');
+    Route::get('/niamwezis', NiyaMwezi::class)
+       ->middleware('role:admin,user')
+       ->name('niamwezis');
 });
+// frontend routes pour les frontend
+Route::get('/acceuil', Index::class)->name('acceuil');
+ Route::get('/apropos-de-nous',AboutLivewire::class)->name('aboutus');
+  Route::get('/nos-doyenne',DoyenneLivewire::class)->name('doyennes');
+    Route::get('/nos-activites',ActiviteLivewire::class)->name('activites');
+      Route::get('/nos-ressources',RessourceLivewire::class)->name('ressources');
+       Route::get('/notre-gallerie-photo',GalerieLivewire::class)->name('galleriephoto');
+   Route::get('/contact',ContactLivewire::class)->name('contact');
+Route::get('/detail-activite/{slug}',Detailactivite::class)->name('detailactivite');
 
