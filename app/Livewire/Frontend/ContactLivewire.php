@@ -4,17 +4,17 @@ namespace App\Livewire\Frontend;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\Mail;
-use App\Models\Contact; // Assure-toi que ton modèle Contact existe
+use App\Models\Contact; // N'oublie pas d'importer le modèle Contact
 
 class ContactLivewire extends Component
 {
-    public $name, $email, $sujet, $message;
+    public $name, $email, $subject, $message;
     public $successMessage = '';
 
     protected $rules = [
         'name' => 'required|string|min:3',
         'email' => 'required|email',
-        'sujet' => 'required|string|min:3',
+        'subject' => 'required|string|min:3',
         'message' => 'required|string|min:5',
     ];
 
@@ -26,20 +26,20 @@ class ContactLivewire extends Component
         Contact::create([
             'name' => $this->name,
             'email' => $this->email,
-            'sujet' => $this->sujet,
+            'subject' => $this->subject, // correspond à la colonne de la table
             'message' => $this->message,
         ]);
 
-        // Envoi d'email 
+        // Envoi d'email (optionnel)
         Mail::raw($this->message, function ($mail) {
             $mail->to('ton_email@exemple.com') // Remplace par ton email réel
-                 ->subject($this->sujet)
+                 ->subject($this->subject)
                  ->from($this->email, $this->name);
         });
 
-        // Réinitialiser les champs du formulaire
-        $this->reset(['name', 'email', 'sujet', 'message']);
-        $this->successMessage = "Merci, ton message a été envoyé et enregistré avec succès !";
+        // Réinitialiser les champs
+        $this->reset(['name', 'email', 'subject', 'message']);
+        $this->successMessage = "Merci, ton message a été envoyé avec succès !";
     }
 
     public function render()
