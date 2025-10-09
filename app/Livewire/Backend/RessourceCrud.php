@@ -5,15 +5,19 @@ namespace App\Livewire\Backend;
 use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\Ressource;
+use Livewire\WithFileUploads;
+use Jantinnerezo\LivewireAlert\Facades\LivewireAlert;
+use Illuminate\Support\Facades\Storage;
 
 class RessourceCrud extends Component
 {
-    use WithPagination;
+     use WithPagination, WithFileUploads;
 
     public $searchTerm = '';
     public $editMode = false;
     public $ressourceId;
      public $lienfichier = null;
+     public $formatressource;
 
     // Champs du formulaire
     public $titre = '';
@@ -24,7 +28,7 @@ class RessourceCrud extends Component
         'titre' => 'required|string|max:255',
         'description' => 'required|string',
         'typeressource' => 'required|string|max:255',
-         'lienfichier' => 'nullable|file|mimes:pdf,doc,docx|max:2048',
+         'lienfichier' => 'nullable|file|mimes:pdf,mp3,mp4|max:10240',
     ];
 
     // Options pour le type de ressource
@@ -61,13 +65,14 @@ class RessourceCrud extends Component
  // Gestion du fichier uploadé
         if ($this->lienfichier) {
             $fileName = time() . '_' . $this->lienfichier->getClientOriginalName();
-            $filePath = $this->lienfichier->storeAs('ressources/doyennes', $fileName, 'public');
+            $filePath = $this->lienfichier->storeAs('ressources', $fileName, 'public');
         }
         Ressource::create([
             'titre' => $this->titre,
             'description' => $this->description,
             'typeressource' => $this->typeressource,
             'file' => $filePath ?? null,
+            'formatressource'=>$this->formatressource
         ]);
 
         $this->resetForm();
@@ -82,7 +87,7 @@ class RessourceCrud extends Component
         $this->ressourceId = $id;
         $this->titre = $ressource->titre;
         $this->description = $ressource->description;
-        $this->typeressource = $ressource->typeressource;
+        $this->formatressource = $ressource->formatressource;
         $this->editMode = true;
         $this->dispatch('openModal');
     }
@@ -96,6 +101,7 @@ class RessourceCrud extends Component
             'titre' => $this->titre,
             'description' => $this->description,
             'typeressource' => $this->typeressource,
+            'formatressource'=>$this->formatressource
         ]);
         // Gestion du fichier uploadé
         if ($this->lienfichier) {
@@ -104,7 +110,7 @@ class RessourceCrud extends Component
                 Storage::disk('public')->delete($ressource->file);
             }
             $fileName = time() . '_' . $this->lienfichier->getClientOriginalName();
-            $filePath = $this->lienfichier->storeAs('ressources/doyennes', $fileName, 'public');
+            $filePath = $this->lienfichier->storeAs('ressources', $fileName, 'public');
             $data['file'] = $filePath;
             $ressource->update($data);
         }
@@ -114,23 +120,42 @@ class RessourceCrud extends Component
         session()->flash('message', 'Ressource modifiée avec succès.');
     }
 
-    public function deleteRessource($id)
-    {
-         $ressource = Ressource::find($id);
-        if ($ressource) {
-            // Supprimer le fichier associé
-            if ($ressource->file && Storage::disk('public')->exists($ressource->file)) {
-                Storage::disk('public')->delete($ressource->file);
-            }
-            $ressource->delete();
-            session()->flash('message', 'Ressource supprimée avec succès.');
-        }
+public function deleteRessource($id){
+ LivewireAlert::title('Supression de la Ressource')
+    ->text('Êtes-vous sûr de vouloir supprimer cet élément ?')
+    ->asConfirm()
+    ->onConfirm('deleteItem', ['id' => $id])
+    // ->onDeny('keepItem', ['id' => $this->itemId])
+    ->show();
     }
 
+public function deleteItem($data)
+{
+    $itemId = $data['id'];
+     $ressource = Ressource::find($itemId);
+
+        if ($ressource) {
+            // Supprimer le fichier associé
+            if ($ressource->lienfichier && Storage::disk('public')->exists($ressource->lienfichier)) {
+                Storage::disk('public')->delete($ressource->lienfichier);
+            }
+
+            $ressource->delete();
+             LivewireAlert::title('Success')
+    ->text('Ressource supprimée avec succès')
+    ->success()
+    ->timer(5000) // Dismisses after 5 seconds
+    ->show();
+            session()->flash('message', 'Ressource supprimée avec succès.');
+        }
+}
+
+
+    public $selectedRessource;
     public function showRessource($id)
     {
-        $ressource = Ressource::findOrFail($id);
-        $this->dispatch('showRessourceDetail', $ressource);
+         $this->selectedRessource = Ressource::findOrFail($id);
+        $this->dispatch('showRessourceDetail');
     }
 
     private function resetForm()
