@@ -53,12 +53,12 @@ Route::middleware([
     Route::get('/niamwezis', NiyaMwezi::class)
        ->middleware('role:admin,user')
        ->name('niamwezis');
-    Route::get('/niamwezis', NiyaMwezi::class)
+    Route::get('/contacts', Contacts::class)
        ->middleware('role:admin,user')
-       ->name('niamwezis');
-    Route::get('/niamwezis', NiyaMwezi::class)
+       ->name('contacts');
+    Route::get('/countmembers', Countmembers::class)
        ->middleware('role:admin,user')
-       ->name('niamwezis');
+       ->name('countmembers');
 });
 // frontend routes pour les frontend
 Route::get('/acceuil', Index::class)->name('acceuil');
