@@ -4,7 +4,7 @@ namespace App\Livewire\Frontend;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\Mail;
-use App\Models\Contact; // N'oublie pas d'importer le modèle Contact
+use App\Models\Contact;
 
 class ContactLivewire extends Component
 {
@@ -26,16 +26,16 @@ class ContactLivewire extends Component
         Contact::create([
             'name' => $this->name,
             'email' => $this->email,
-            'subject' => $this->subject, // correspond à la colonne de la table
+            'subject' => $this->subject,
             'message' => $this->message,
         ]);
 
         // Envoi d'email (optionnel)
-        Mail::raw($this->message, function ($mail) {
-            $mail->to('ton_email@exemple.com') // Remplace par ton email réel
-                 ->subject($this->subject)
-                 ->from($this->email, $this->name);
-        });
+        // Mail::raw($this->message, function ($mail) {
+        //     $mail->to('ton_email@exemple.com')
+        //          ->subject($this->subject)
+        //          ->from($this->email, $this->name);
+        // });
 
         // Réinitialiser les champs
         $this->reset(['name', 'email', 'subject', 'message']);
