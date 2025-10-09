@@ -23,9 +23,9 @@ use App\Livewire\Frontend\AboutLivewire;
 use App\Livewire\Frontend\RessourceLivewire;
 use App\Livewire\Frontend\Detailactivite;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return redirect()->route('acceuil');
+});
 
 Route::middleware([
     'auth:sanctum',
