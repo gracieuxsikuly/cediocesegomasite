@@ -14,6 +14,15 @@ use App\Livewire\Backend\NiyaMwezi;
 use App\Livewire\Backend\Contacts;
 use App\Livewire\Backend\Countmembers;
 
+use App\Livewire\Frontend\Index;
+use App\Livewire\Frontend\ActiviteLivewire;
+use App\Livewire\Frontend\ContactLivewire;
+use App\Livewire\Frontend\DoyenneLivewire;
+use App\Livewire\Frontend\GalerieLivewire;
+use App\Livewire\Frontend\AboutLivewire;
+use App\Livewire\Frontend\RessourceLivewire;
+use App\Livewire\Frontend\Detailactivite;
+
 // Route::get('/', function () {
 //     return view('welcome');
 // });
