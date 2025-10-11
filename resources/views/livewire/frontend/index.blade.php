@@ -297,14 +297,14 @@ eucharistique</p>
                     <div class="counter-item">
                         <!-- Counter Title Start -->
                         <div class="counter-title">
-                            <h2><span class="counter">1500</span>+</h2>
+                            <h2><span class="counter">{{$count_croisions}}</span>+</h2>
                         </div>
                         <!-- Counter Title End -->                     
 
                         <!-- Counter Content Start -->
                         <div class="counter-content">
                             <h3>Croisillons</h3>
-                            <p>sur 6300 croises du Diocese de Goma</p>
+                            <p>sur {{$total_ce}} croises du Diocese de Goma</p>
                         </div>
                         <!-- Counter Content End -->
                     </div>
@@ -316,14 +316,14 @@ eucharistique</p>
                     <div class="counter-item">
                         <!-- Counter Title Start -->
                         <div class="counter-title">
-                            <h2><span class="counter">2000</span>+</h2>
+                            <h2><span class="counter">{{$count_feunouveau}}</span>+</h2>
                         </div>
                         <!-- Counter Title End -->                     
 
                         <!-- Counter Content Start -->
                         <div class="counter-content">                            
                             <h3>Feux nouveaux</h3>
-                            <p>sur 6300 croises du Diocese de Goma</p>
+                            <p>sur {{$total_ce}} croises du Diocese de Goma</p>
                         </div>
                         <!-- Counter Content End -->
                     </div>
@@ -335,14 +335,14 @@ eucharistique</p>
                     <div class="counter-item">
                         <!-- Counter Title Start -->
                         <div class="counter-title">
-                            <h2><span class="counter">1800</span>+</h2>                            
+                            <h2><span class="counter">{{$count_cadets}}</span>+</h2>
                         </div>
                         <!-- Counter Title End -->                     
 
                         <!-- Counter Content Start -->
                         <div class="counter-content">
                             <h3>Cadet(te)s</h3>
-                           <p>sur 6300 croises du Diocese de Goma</p>
+                           <p>sur {{$total_ce}} croises du Diocese de Goma</p>
                         </div>
                         <!-- Counter Content End -->
                     </div>
@@ -354,14 +354,14 @@ eucharistique</p>
                     <div class="counter-item">
                         <!-- Counter Title Start -->
                         <div class="counter-title">
-                            <h2><span class="counter">1000</span>+</h2>
+                            <h2><span class="counter">{{$count_equaps}}</span>+</h2>
                         </div>
                         <!-- Counter Title End -->                     
 
                         <!-- Counter Content Start -->
                         <div class="counter-content">
                             <h3>Equaps</h3>
-                           <p>sur 6300 croises du Diocese de Goma</p>
+                           <p>sur {{$total_ce}} croises du Diocese de Goma</p>
                         </div>
                         <!-- Counter Content End -->
                     </div>
