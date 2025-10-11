@@ -9,7 +9,7 @@
 						<h1 class="text-anime-style-2" data-cursor="-opaque">Contact Us</h1>
 						<nav class="wow fadeInUp">
 							<ol class="breadcrumb">
-								<li class="breadcrumb-item"><a href="index-2.html">home</a></li>
+								<li class="breadcrumb-item"><a href="{{ route('acceuil') }}">Acceuil</a></li>
 								<li class="breadcrumb-item active" aria-current="page">contact us</li>
 							</ol>
 						</nav>
