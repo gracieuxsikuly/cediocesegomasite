@@ -5,6 +5,7 @@ namespace App\Livewire\Backend;
 use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\Contact;
+use Jantinnerezo\LivewireAlert\Facades\LivewireAlert;
 
 class Contacts extends Component
 {
@@ -16,21 +17,24 @@ class Contacts extends Component
     public $successMessage = '';
 
     // SUPPRESSION 
-    public function deleteContact($id)
-    {
-        $this->itemIdToDelete = $id;
-        $this->confirmingDelete = true;
+     public function deleteContact($id){
+ LivewireAlert::title('Supression contact')
+    ->text('Êtes-vous sûr de vouloir supprimer ce contact ?')
+    ->asConfirm()
+    ->onConfirm('deleteItem', ['id' => $id])
+    ->show();
     }
 
-    public function confirmDelete()
-    {
-        if($this->itemIdToDelete) {
-            Contact::find($this->itemIdToDelete)->delete();
-            $this->confirmingDelete = false;
-            $this->itemIdToDelete = null;
-            $this->successMessage = 'Contact supprimé avec succès';
-        }
-    }
+public function deleteItem($data)
+{
+    $itemId = $data['id'];
+     Contact::find($itemId)->delete();
+     LivewireAlert::title('Success')
+    ->text('contact Suprimé avec success')
+    ->success()
+    ->timer(5000) // Dismisses after 5 seconds
+    ->show();
+}
 
     public function cancelDelete()
     {

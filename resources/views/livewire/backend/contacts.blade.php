@@ -51,10 +51,10 @@
                                         <td>{{ Str::limit($contact->message, 50) }}</td>
                                         <td>{{ $contact->created_at->format('d/m/Y H:i') }}</td>
                                         <td>
-                                            <button type="button" class="btn btn-sm btn-danger" 
-                                                wire:click="deleteContact({{ $contact->id }})">
-                                                <i class="fas fa-trash"></i> Supprimer
-                                            </button>
+                                           <button type="button" class="btn btn-sm btn-danger"
+                                                    wire:click="deleteContact({{ $contact->id }})">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
                                         </td>
                                     </tr>
                                     @empty
