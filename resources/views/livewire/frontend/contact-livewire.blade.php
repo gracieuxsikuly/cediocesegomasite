@@ -171,7 +171,7 @@
                 <div class="col-lg-12">
                     <!-- Google Map Iframe Start -->
                     <div class="google-map-iframe">
-                        {{-- Correction: Remplacement de la carte New York par Goma, RDC --}}
+                        
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d408595.152944246!2d28.97278045!3d-1.65439035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dd3d63ab1c3e61%3A0x2d0d2e8a6b9a4f1f!2sGoma%2C%20Nord-Kivu%2C%20R%C3%A9publique%20D%C3%A9mocratique%20du%20Congo!5e0!3m2!1sfr!2sfr!4v1703158537552" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <!-- Google Map Iframe End -->
