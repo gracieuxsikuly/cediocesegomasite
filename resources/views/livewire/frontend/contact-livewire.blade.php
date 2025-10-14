@@ -33,31 +33,26 @@
                                <h2 class="text-anime-style-2" data-cursor="-opaque"> <span>LA CROISADE EUCHARISTIQUE</span></h2> {{-- Correction: EUHARISTIQUE -> EUCHARISTIQUE --}}
                             <p class="wow fadeInUp" data-wow-delay="0.25s">Contactez pour plus d'Informations</p>
                         </div>
-                        <!-- Contact Information Title End -->
-
-                        <!-- Contact Information List Start -->
+                        
                         <div class="contact-info-list">
-                            <!-- Contact Info Item Start -->
+                        
                             <div class="contact-info-item wow fadeInUp" data-wow-delay="0.25s">
-                                <!-- Icon Box Start -->
+                                
                                 <div class="icon-box">
                                     <img src="{{asset('asset_frontend/images/icon-phone.svg')}}" alt="Icône téléphone">
+                                    <h3>(+243) 824 500 018</h3>
                                 </div>
-                                <!-- Icon Box End -->
-
-                                <!-- Contact Info Content Start -->
-                                <div class="contact-info-content">
-                                    <p>contact</p>
-                                    <h3>(+243) 824 500 0187</h3>
+                                <div class="icon-box">
+                                    <img src="{{asset('asset_frontend/images/icon-phone.svg')}}" alt="Icône téléphone">
                                     <h4>(+243)  990 378 202</h4>
-                                    <h5>(+243)  995 764 961</h5>
-                                    <h5>(+243)  819 469 877</h5>
                                 </div>
-                                <!-- Contact Info Content End -->
+                              <div class="icon-box">
+                                    <img src="{{asset('asset_frontend/images/icon-phone.svg')}}" alt="Icône téléphone"><h5>(+243)  995 764 961</h5>
+                                 
+                                </div>                       
+                        
                             </div>
-                            <!-- Contact Info Item End -->
-
-                            <!-- Contact Info Item Start -->
+                           
                             <div class="contact-info-item wow fadeInUp" data-wow-delay="0.5s">
                                 <!-- Icon Box Start -->
                                 <div class="icon-box">
