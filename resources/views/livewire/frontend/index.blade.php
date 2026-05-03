@@ -4,89 +4,42 @@
         <div class="hero-slider-layout">
             <div class="swiper">
                 <div class="swiper-wrapper">
-                    <!-- Hero Slide Start -->
-                    <div class="swiper-slide">
-                        <div class="hero-slide">
-                            <!-- Slider Image Start -->
-                            <div class="hero-slider-image">
-                                <img src="{{asset('asset_frontend/images/hero-bg-3.jpg')}}" alt="">
-                            </div>
-                            <!-- Slider Image End -->
-    
-                            <!-- Slider Content Start -->
-                            <div class="container">
-                                <div class="row align-items-center">
-                                    <div class="col-lg-12">
-                                        <!-- Hero Content Start -->
-                                        <div class="hero-content">
-                                            <!-- Section Title Start -->
-                                            <div class="section-title">
-                                                <h3 class="wow fadeInUp">L'adoration</h3>
-                                                <h1 class="text-anime-style-2" data-cursor="-opaque">Notre device</h1>
-                                                <p class="wow fadeInUp" data-wow-delay="0.25s">Prie, communie, sacrifie-toi, sois apotre</p>
-                                            </div>
-                                            <!-- Section Title End -->
-                    
-                                            <!-- Hero Content Body Start -->
-                                            <div class="hero-content-body wow fadeInUp" data-wow-delay="0.5s">
-                                                <a href="{{ route('ressources') }}" class="btn-default"><span>Ressources</span></a>
-                                                <a href="{{ route('contact') }}" class="btn-default btn-highlighted"><span>Rejoindre la croisade eucharistique</span></a>
-                                            </div>
-                                            <!-- Hero Content Body End -->
-                                        </div>
-                                        <!-- Hero Content End -->
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="down-arrow">
-                                <a href="#home-about"><i class="fa-solid fa-arrow-down-long"></i></a>
-                            </div>
-                            <!-- Slider Content End -->
-                        </div>
-                    </div>
-                    <!-- Hero Slide End -->
+                    @php
+                        $homepageSliders = $sliders->isNotEmpty() ? $sliders : collect([
+                            (object) ['image' => null, 'default_image' => 'asset_frontend/images/hero-bg-3.jpg', 'sous_titre' => "L'adoration", 'titre' => 'Notre device', 'description' => 'Prie, communie, sacrifie-toi, sois apotre', 'bouton_texte' => 'Ressources', 'bouton_lien' => route('ressources'), 'bouton_secondaire_texte' => 'Rejoindre la croisade eucharistique', 'bouton_secondaire_lien' => route('contact')],
+                            (object) ['image' => null, 'default_image' => 'asset_frontend/images/hero-bg-4.jpg', 'sous_titre' => 'Avec le Christ!!!', 'titre' => "Rien n'est impossible", 'description' => 'Une journée sans messe est une journée sans soleil', 'bouton_texte' => 'Ressources', 'bouton_lien' => route('ressources'), 'bouton_secondaire_texte' => 'Rejoindre la croisade eucharistique', 'bouton_secondaire_lien' => route('contact')],
+                        ]);
+                    @endphp
 
-                    <!-- Hero Slide Start -->
+                    @foreach($homepageSliders as $slider)
                     <div class="swiper-slide">
                         <div class="hero-slide">
-                            <!-- Slider Image Start -->
                             <div class="hero-slider-image">
-                                <img src="{{asset('asset_frontend/images/hero-bg-4.jpg')}}" alt="">
+                                <img src="{{ $slider->image ? asset('storage/' . $slider->image) : asset($slider->default_image) }}" alt="{{ $slider->titre }}">
                             </div>
-                            <!-- Slider Image End -->
-    
-                            <!-- Slider Content Start -->
                             <div class="container">
                                 <div class="row align-items-center">
                                     <div class="col-lg-12">
-                                        <!-- Hero Content Start -->
                                         <div class="hero-content">
-                                            <!-- Section Title Start -->
                                             <div class="section-title">
-                                                <h3 class="wow fadeInUp">Avec le Christ!!!</h3>
-                                                <h1 class="text-anime-style-2" data-cursor="-opaque">Rien n'est impossible</h1>
-                                                <p class="wow fadeInUp" data-wow-delay="0.25s">Une journée sans messe est une journée sans soleil</p>
+                                                @if($slider->sous_titre)<h3 class="wow fadeInUp">{{ $slider->sous_titre }}</h3>@endif
+                                                <h1 class="text-anime-style-2" data-cursor="-opaque">{{ $slider->titre }}</h1>
+                                                @if($slider->description)<p class="wow fadeInUp" data-wow-delay="0.25s">{{ $slider->description }}</p>@endif
                                             </div>
-                                            <!-- Section Title End -->
-                    
-                                            <!-- Hero Content Body Start -->
                                             <div class="hero-content-body wow fadeInUp" data-wow-delay="0.5s">
-                                                <a href="{{ route('ressources') }}" class="btn-default"><span>Ressources</span></a>
-                                                <a href="{{ route('contact') }}" class="btn-default btn-highlighted"><span>Rejoindre la croisade eucharistique</span></a>
+                                                @if($slider->bouton_texte && $slider->bouton_lien)<a href="{{ $slider->bouton_lien }}" class="btn-default"><span>{{ $slider->bouton_texte }}</span></a>@endif
+                                                @if($slider->bouton_secondaire_texte && $slider->bouton_secondaire_lien)<a href="{{ $slider->bouton_secondaire_lien }}" class="btn-default btn-highlighted"><span>{{ $slider->bouton_secondaire_texte }}</span></a>@endif
                                             </div>
-                                            <!-- Hero Content Body End -->
                                         </div>
-                                        <!-- Hero Content End -->
                                     </div>
                                 </div>
                             </div>
                             <div class="down-arrow">
                                 <a href="#home-about"><i class="fa-solid fa-arrow-down-long"></i></a>
                             </div>
-                            <!-- Slider Content End -->
                         </div>
                     </div>
-                    <!-- Hero Slide End -->
+                    @endforeach
                      
                 </div>
                 <div class="hero-pagination"></div>

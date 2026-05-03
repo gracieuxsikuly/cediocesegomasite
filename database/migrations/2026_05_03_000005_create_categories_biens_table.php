@@ -11,8 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-             $table->enum('role', ['user', 'admin', 'activites_ressources', 'radio_maria', 'manager_donnees', 'secretariat', 'zelateur', 'tresorerie'])->default('admin')->after('email');
+        Schema::create('categories_biens', function (Blueprint $table) {
+            $table->id();
+            $table->string('designation')->unique();
+            $table->text('description')->nullable();
+            $table->timestamps();
         });
     }
 
@@ -21,8 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('role');
-        });
+        Schema::dropIfExists('categories_biens');
     }
 };

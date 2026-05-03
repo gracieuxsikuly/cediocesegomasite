@@ -159,20 +159,95 @@
     </div>
     <!-- Page Contact Us End -->
 
-    <!-- Google Map Start -->
-	<div class="google-map">
+    <!-- Map Start -->
+	<div class="google-map leaflet-map-section">
         <div class="container-fluid">
             <div class="row no-gutter">
                 <div class="col-lg-12">
-                    <!-- Google Map Iframe Start -->
-                    <div class="google-map-iframe">
-                        
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d408595.152944246!2d28.97278045!3d-1.65439035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dd3d63ab1c3e61%3A0x2d0d2e8a6b9a4f1f!2sGoma%2C%20Nord-Kivu%2C%20R%C3%A9publique%20D%C3%A9mocratique%20du%20Congo!5e0!3m2!1sfr!2sfr!4v1703158537552" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="google-map-iframe leaflet-map-card">
+                        <div id="cathedrale-map" style="height: 460px; width: 100%;"></div>
                     </div>
-                    <!-- Google Map Iframe End -->
                 </div>
             </div>
         </div>
     </div>
-	<!-- Google Map End -->
+	<!-- Map End -->
 </div>
+
+@push('styles')
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<style>
+    .leaflet-map-section {
+        padding: 0 0 100px;
+        overflow: hidden;
+    }
+
+    .leaflet-map-card {
+        position: relative;
+        height: 460px;
+        max-height: 460px;
+        overflow: hidden;
+        border-radius: 8px;
+        border: 1px solid #e9e9e9;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+        background: #fff;
+    }
+
+    .leaflet-map-card #cathedrale-map,
+    .leaflet-map-card .leaflet-container {
+        position: absolute;
+        inset: 0;
+        width: 100% !important;
+        height: 100% !important;
+        border-radius: 8px;
+        z-index: 1;
+    }
+
+    .leaflet-map-card img {
+        max-width: none !important;
+    }
+
+    @media (max-width: 767px) {
+        .leaflet-map-section {
+            padding-bottom: 70px;
+        }
+
+        .leaflet-map-card {
+            height: 360px;
+            max-height: 360px;
+            border-radius: 6px;
+        }
+    }
+</style>
+@endpush
+
+@push('scripts')
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const mapElement = document.getElementById('cathedrale-map');
+        if (!mapElement || mapElement.dataset.initialized) return;
+
+        mapElement.dataset.initialized = 'true';
+        const position = [-1.6792, 29.2285];
+
+        L.Icon.Default.imagePath = '';
+        L.Icon.Default.mergeOptions({
+            iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
+            iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
+            shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png'
+        });
+
+        const map = L.map('cathedrale-map').setView(position, 16);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; OpenStreetMap'
+        }).addTo(map);
+
+        L.marker(position).addTo(map)
+            .bindPopup('<strong>Paroisse Cathedrale Saint Joseph</strong><br>Goma, Nord-Kivu')
+            .openPopup();
+    });
+</script>
+@endpush

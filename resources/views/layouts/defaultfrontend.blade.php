@@ -34,6 +34,7 @@
 	<link rel="stylesheet" href="{{asset('asset_frontend/css/plyr.css')}}">
 	<!-- Main Custom Css -->
 	<link href="{{asset('asset_frontend/css/custom.css')}}" rel="stylesheet" media="screen">
+    @livewireStyles
     @stack('styles')
 </head>
 <body>
@@ -94,5 +95,7 @@
     <!-- Main Custom js file -->
     <script src="{{asset('asset_frontend/js/function.js')}}"></script>
 	<script src="{{asset('asset_frontend/demo.awaikenthemes.com/assets/js/theme-panel.js')}}"></script>
+    @livewireScripts
+    @stack('scripts')
 </body>
 </html>

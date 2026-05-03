@@ -8,6 +8,7 @@ class AboutLivewire extends Component
 {
     public function render()
     {
-        return view('livewire.frontend.about-livewire');
+        return view('livewire.frontend.about-livewire')
+            ->layout('layouts.defaultfrontend', ['title' => 'A propos de nous']);
     }
 }

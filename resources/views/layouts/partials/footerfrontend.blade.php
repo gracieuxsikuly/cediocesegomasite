@@ -45,6 +45,7 @@ l’action catholique.
                             <li><a href="{{ route('doyennes') }}">Doyennés</a></li>
                             <li><a href="{{ route('activites') }}">Activités</a></li>
                             <li><a href="{{ route('ressources') }}">Ressources</a></li>
+                            <li><a href="{{ route('emissions.radio-maria.frontend') }}">Radio Maria</a></li>
                             <li><a href="{{ route('galleriephoto') }}">Galerie</a></li>
                         </ul>
                     </div>

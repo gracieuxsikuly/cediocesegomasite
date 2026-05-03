@@ -6,7 +6,7 @@ use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\Niamwezi as Niamwezimodel;
 
-class Niyamwezi extends Component
+class NiyaMwezi extends Component
 {
     use WithPagination;
 

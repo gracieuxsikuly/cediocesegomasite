@@ -68,19 +68,13 @@
         <div class="rightbar-overlay"></div> --}}
 
         <!-- JAVASCRIPT -->
-        <script src="{{('assets_backend/libs/jquery/jquery.min.js')}}"></script>
-        <script src="{{('assets_backend/libs/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-        <script src="{{('assets_backend/libs/metismenu/metisMenu.min.js')}}"></script>
-        <script src="{{('assets_backend/libs/simplebar/simplebar.min.js')}}"></script>
-        <script src="{{('assets_backend/libs/node-waves/waves.min.js')}}"></script>
+        <script src="{{ asset('assets_backend/libs/jquery/jquery.min.js') }}"></script>
+        <script src="{{ asset('assets_backend/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ asset('assets_backend/libs/metismenu/metisMenu.min.js') }}"></script>
+        <script src="{{ asset('assets_backend/libs/simplebar/simplebar.min.js') }}"></script>
+        <script src="{{ asset('assets_backend/libs/node-waves/waves.min.js') }}"></script>
 
-        <!-- apexcharts -->
-        <script src="{{('assets_backend/libs/apexcharts/apexcharts.min.js')}}"></script>
-
-        <!-- dashboard blog init -->
-        <script src="{{('assets_backend/js/pages/dashboard-blog.init.js')}}"></script>
-
-        <script src="{{('assets_backend/js/app.js')}}"></script>
+        <script src="{{ asset('assets_backend/js/app.js') }}"></script>
          <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 @livewireScripts
 @stack('scripts')

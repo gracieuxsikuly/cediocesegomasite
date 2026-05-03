@@ -7,6 +7,7 @@ use App\Models\Niamwezi;
 use App\Models\Activiteprogramme;
 use App\Models\Ressource;
 use App\Models\Countmember;
+use App\Models\Slider;
 class Index extends Component
 {
     public $mois;
@@ -41,9 +42,11 @@ public function mount()
     {
         $activities=Activiteprogramme::where('statut','effectif')->orderBy('dateactivite','DESC')->take(3)->get();
         $resources= Ressource::orderBy('created_at','DESC')->take(3)->get();
+        $sliders = Slider::where('statut', 'actif')->orderBy('ordre')->get();
         return view('livewire.frontend.index',[
             'activities'=>$activities,
             'resources'=>$resources,
+            'sliders'=>$sliders,
         ])->layout('layouts.defaultfrontend', ['title' => 'Accueil']);
     }
 }
