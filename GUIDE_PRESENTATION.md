@@ -27,7 +27,7 @@ En bref : **Un seul endroit pour tout ce qui concerne la Croisade Eucharistique 
 
 ### Sur Ordinateur
 1. Ouvrez votre navigateur internet (Chrome, Firefox, Edge, Safari)
-2. Allez à l'adresse : **https://cediocesegomasite.com** (ou l'adresse fournie)
+2. Allez à l'adresse : **https://croisadeucharistiquedgoma.org** (ou l'adresse fournie)
 3. Vous verrez la page d'accueil du site
 
 ### Sur Téléphone
@@ -359,7 +359,7 @@ Nous aimerions entendre vos suggestions pour améliorer l'application !
 
 ## 🎉 Prochaines Étapes
 
-1. **Visitez le site** : https://cediocesegomasite.com
+1. **Visitez le site** : https://croisadeucharistiquedgoma.org
 2. **Explorez les sections** : Prenez le temps de découvrir chaque partie
 3. **Créez un compte** (si responsable) : Demandez à votre coordinateur
 4. **Participez** : Engagez-vous dans les activités et événements

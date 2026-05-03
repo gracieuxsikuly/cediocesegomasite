@@ -3,7 +3,7 @@
 ## ⚡ Les Essentiels en Un Coup d'Œil
 
 ### 🌐 Accès Rapide
-**Adresse Web** : https://cediocesegomasite.com
+**Adresse Web** : https://croisadeucharistiquedgoma.org
 
 ### 📱 Compatible Avec
 ✓ Ordinateurs  
@@ -139,7 +139,7 @@
 
 **Une seule adresse, un seul endroit pour tout !**
 
-https://cediocesegomasite.com
+https://croisadeucharistiquedgoma.org
 
 **Utilisez-la, explorez-la, améliorez-la ensemble !**
 

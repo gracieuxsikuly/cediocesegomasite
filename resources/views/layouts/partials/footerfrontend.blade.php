@@ -81,7 +81,7 @@ l’action catholique.
                                 <div class="footer-info-box-content">
                                     <p>(+243) 824 500 018| 990 378 202</p>
                                     <p>(+243) 995764961| 0819469877</p>
-                                    {{-- « croisadeeucharistique.diocese.goma@gmail.com » --}}
+                                    {{-- « croisadeucharistiquedgoma.org » --}}
                                 </div>                                
                             </div>
                             <!-- Footer Info Box End -->
@@ -92,7 +92,7 @@ l’action catholique.
                                     <img src="{{ asset('asset_frontend/images/icon-mail.svg') }}" alt="">
                                 </div>
                                 <div class="footer-info-box-content">
-                                    <p>croisadeeucharistique.diocese.goma@gmail.com</p>
+                                    <p>croisadeucharistiquedgoma.org</p>
                                 </div>
                             </div>
                             <!-- Footer Info Box End -->

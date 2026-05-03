@@ -63,7 +63,7 @@
                                 <!-- Contact Info Content Start -->
                                 <div class="contact-info-content">
                                     <p>Envoi un message</p>
-                                    <h3>croisadeeucharistique.diocese.goma@gmail.com</h3>
+                                    <h3>croisadeucharistiquedgoma.org</h3>
                                 </div>
                                 <!-- Contact Info Content End -->
                             </div>
