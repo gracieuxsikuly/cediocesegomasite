@@ -70,6 +70,11 @@
                 
                 <a href="#" class="read-more-btn" data-bs-toggle="modal" data-bs-target="#resourceModal{{ $resource->id }}">Lire plus</a>
             </div>
+            @include('partials.social-share-buttons', [
+                'shareUrl' => route('partage.ressource', ['resource' => $resource->id]),
+                'shareTitle' => $resource->titre,
+                'shareDescription' => \Illuminate\Support\Str::limit(strip_tags($resource->description ?? ''), 130),
+            ])
             <!-- Post Item Footer End-->
         </div>
         <!-- Blog Item End -->
@@ -89,11 +94,16 @@
                             @else fa-file text-secondary
                             @endif
                         "></i>
-                        {{ $resource->title }}
+                        {{ $resource->titre }}
                     </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+                    @include('partials.social-share-buttons', [
+                        'shareUrl' => route('partage.ressource', ['resource' => $resource->id]),
+                        'shareTitle' => $resource->titre,
+                        'shareDescription' => \Illuminate\Support\Str::limit(strip_tags($resource->description ?? ''), 130),
+                    ])
                     @if($resource->file)
                         @php
                             $fileExtension = strtolower(pathinfo($resource->file, PATHINFO_EXTENSION));
@@ -141,7 +151,7 @@
                         @elseif(in_array($fileExtension, ['jpg', 'jpeg', 'png', 'gif', 'bmp', 'svg', 'webp']))
                             <div class="text-center">
                                 <img src="{{ asset('storage/' . $resource->file) }}" 
-                                     alt="{{ $resource->title }}" 
+                                     alt="{{ $resource->titre }}" 
                                      class="img-fluid rounded" 
                                      style="max-height: 500px;">
                             </div>

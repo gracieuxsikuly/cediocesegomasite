@@ -17,6 +17,7 @@ use App\Livewire\Backend\ProfileEdit;
 use App\Livewire\Backend\SliderCrud;
 use App\Livewire\Backend\UserCrud;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FrontendShareController;
 use App\Livewire\Backend\NiyaMwezi;
 use App\Livewire\Backend\Contacts;
 use App\Livewire\Backend\Countmembers;
@@ -108,4 +109,7 @@ Route::get('/acceuil', Index::class)->name('acceuil');
        Route::get('/notre-gallerie-photo',GalerieLivewire::class)->name('galleriephoto');
    Route::get('/contact',ContactLivewire::class)->name('contact');
 Route::get('/detail-activite/{slug}',Detailactivite::class)->name('detailactivite');
+Route::get('/partage/galerie', [FrontendShareController::class, 'gallery'])->name('partage.galerie');
+Route::get('/partage/photo/{photo}', [FrontendShareController::class, 'photo'])->name('partage.photo');
+Route::get('/partage/ressource/{resource}', [FrontendShareController::class, 'resource'])->name('partage.ressource');
 

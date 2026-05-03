@@ -1,4 +1,8 @@
 <div>
+    @php
+        $activityShareUrl = route('detailactivite', ['slug' => $activity->slug]);
+        $activityShareDescription = \Illuminate\Support\Str::limit(strip_tags($activity->description ?? ''), 150);
+    @endphp
     <div class="page-header">
         <div class="container">
             <div class="row align-items-center">
@@ -39,6 +43,11 @@
                             <div class="sermons-title">
                                 <h2>{{ $activity->titre }}</h2>
                             </div>
+                            @include('partials.social-share-buttons', [
+                                'shareUrl' => $activityShareUrl,
+                                'shareTitle' => $activity->titre,
+                                'shareDescription' => $activityShareDescription,
+                            ])
                             <div class="sermons-list">
                                 <ul>
                                     <li><i class="fa-solid fa-location-dot"></i>Lieu : <span>{{ $activity->emplacement ?? 'N/A' }}</span></li>
@@ -65,6 +74,11 @@
                             @endif
                             <p><strong>Paroisse:</strong> {{ $activity->paroisse->designation ?? 'N/A' }}</p>
                             <p><strong>Doyenne:</strong> {{ $activity->doyenne->designation ?? 'N/A' }}</p>
+                            @include('partials.social-share-buttons', [
+                                'shareUrl' => $activityShareUrl,
+                                'shareTitle' => $activity->titre,
+                                'shareDescription' => $activityShareDescription,
+                            ])
                         </div>
                         <div class="post-item-footer">
                             <a href="{{ route('activites') }}" class="read-more-btn">Retour aux activites</a>

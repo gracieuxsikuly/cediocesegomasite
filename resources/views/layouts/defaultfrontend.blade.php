@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    @php
+        $siteName = 'Croisade Eucharistique - Diocèse de Goma';
+        $defaultDescription = "Plateforme officielle de la Croisade Eucharistique du Diocèse de Goma : activités, ressources spirituelles, galerie, Radio Maria et informations du mouvement.";
+        $pageTitle = isset($title) && $title ? $title . ' | ' . $siteName : $siteName;
+        $pageDescription = $metaDescription ?? $defaultDescription;
+        $pageKeywords = $metaKeywords ?? 'Croisade Eucharistique, Diocèse de Goma, Eucharistie, jeunes catholiques, activités catholiques, ressources spirituelles, galerie photos, Radio Maria';
+        $pageImage = $metaImage ?? asset('asset_frontend/images/logoce.png');
+        $pageUrl = $metaUrl ?? url()->current();
+        $pageType = $metaType ?? 'website';
+    @endphp
 	<!-- Meta -->
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
- <title>Croisade Eucharistique | Mouvement spirituel des enfants et jeunes</title>
+ <title>{{ $pageTitle }}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="La Croisade Eucharistique est un mouvement spirituel catholique pour enfants, adolescents, jeunes et adulte, visant à les éduquer dans la foi, la prière, le service, le partage et l’amour de l’Eucharistie. Présente dans plusieurs paroisses et écoles, elle forme des apôtres au service de l’Église et de la société.">
-        <meta name="author" content="Croisade Eucharistique, gracieux sikuly" />
-        <meta name="keywords" content="Croisade Eucharistique, Mouvement catholique, Eucharistie, Enfants, Jeunes, Foi, Prière, Service, Partage, Amour, Église, Mouvement spirituel, Adoration" />
+        <meta name="description" content="{{ $pageDescription }}">
+        <meta name="author" content="Croisade Eucharistique du Diocèse de Goma" />
+        <meta name="keywords" content="{{ $pageKeywords }}" />
         <meta name="robots" content="index, follow">
+        <link rel="canonical" href="{{ $pageUrl }}">
+        <meta property="og:locale" content="fr_FR">
+        <meta property="og:type" content="{{ $pageType }}">
+        <meta property="og:site_name" content="{{ $siteName }}">
+        <meta property="og:title" content="{{ $pageTitle }}">
+        <meta property="og:description" content="{{ $pageDescription }}">
+        <meta property="og:url" content="{{ $pageUrl }}">
+        <meta property="og:image" content="{{ $pageImage }}">
+        <meta property="og:image:alt" content="{{ $pageTitle }}">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="{{ $pageTitle }}">
+        <meta name="twitter:description" content="{{ $pageDescription }}">
+        <meta name="twitter:image" content="{{ $pageImage }}">
 	<!-- Favicon Icon -->
 	<link rel="shortcut icon" type="image/x-icon" href="{{ asset('asset_frontend/images/logoce.png') }}">
 	<!-- Google Fonts Css-->

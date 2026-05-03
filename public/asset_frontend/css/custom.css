@@ -60,6 +60,150 @@
 	--default-font			: "Fira Sans Condensed", sans-serif;
 }
 
+.social-share-box{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin: 18px 0;
+}
+
+.social-share-label{
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 1;
+	color: var(--primary-color);
+	text-transform: uppercase;
+}
+
+.social-share-btn{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 42px;
+	height: 42px;
+	border: 1px solid var(--dark-divider-color);
+	border-radius: 50%;
+	background: var(--white-color);
+	color: var(--primary-color);
+	font-size: 17px;
+	transition: all 0.3s ease-in-out;
+}
+
+.social-share-btn:hover,
+.social-share-btn:focus{
+	color: var(--white-color);
+	transform: translateY(-2px);
+}
+
+.social-share-btn.whatsapp:hover,
+.social-share-btn.whatsapp:focus{
+	border-color: #25d366;
+	background: #25d366;
+}
+
+.social-share-btn.facebook:hover,
+.social-share-btn.facebook:focus{
+	border-color: #1877f2;
+	background: #1877f2;
+}
+
+.social-share-btn.x-twitter:hover,
+.social-share-btn.x-twitter:focus,
+.social-share-btn.copy-link:hover,
+.social-share-btn.copy-link:focus{
+	border-color: var(--primary-color);
+	background: var(--primary-color);
+}
+
+.social-share-btn.copy-link{
+	cursor: pointer;
+}
+
+.photo-gallery .social-share-box{
+	justify-content: center;
+	margin-top: 12px;
+}
+
+.photo-gallery .social-share-label{
+	display: none;
+}
+
+.share-preview-page{
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 40px 15px;
+	background: #f7f7f7;
+}
+
+.share-preview-card{
+	width: min(920px, 100%);
+	background: var(--white-color);
+	border: 1px solid var(--dark-divider-color);
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 18px 50px rgba(0, 0, 0, 0.08);
+}
+
+.share-preview-logo{
+	width: 76px;
+	height: 76px;
+	object-fit: contain;
+	display: block;
+	margin: 24px auto 0;
+}
+
+.share-preview-image{
+	width: 100%;
+	max-height: 480px;
+	object-fit: cover;
+	display: block;
+	margin-top: 24px;
+}
+
+.share-preview-content{
+	padding: 30px;
+	text-align: center;
+}
+
+.share-preview-site{
+	margin-bottom: 10px;
+	font-weight: 700;
+	color: var(--accent-color);
+	text-transform: uppercase;
+}
+
+.share-preview-content h1{
+	font-size: 34px;
+	line-height: 1.2em;
+	margin-bottom: 14px;
+}
+
+.share-preview-content .social-share-box{
+	justify-content: center;
+}
+
+.share-preview-actions{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 14px;
+	margin-top: 22px;
+}
+
+@media only screen and (max-width: 767px){
+	.share-preview-content{
+		padding: 22px;
+	}
+
+	.share-preview-content h1{
+		font-size: 26px;
+	}
+}
+
 /************************************/
 /*** 	   02. General css		  ***/
 /************************************/
