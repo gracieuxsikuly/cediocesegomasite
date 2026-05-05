@@ -46,7 +46,7 @@
                                 </figure>
                             </div>
                             <div class="mission-life-circle">
-                                <img src="{{ asset('asset_frontend/images/logoce.png') }}" alt="Radio Maria">
+                                <img src="{{ asset('asset_frontend/images/logoce.png') }}" alt="Radio Maria" width="200px" height="200px">
                             </div>
                         </div>
                     </div>
