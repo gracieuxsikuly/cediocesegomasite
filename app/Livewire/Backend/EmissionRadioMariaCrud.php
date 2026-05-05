@@ -29,8 +29,16 @@ class EmissionRadioMariaCrud extends Component
         'description' => 'nullable|string',
         'date_emission' => 'required|date',
         'paroisse_id' => 'required|exists:paroisses,id',
-        'fichier_audio' => 'nullable|file|mimes:mp3,wav,ogg,m4a|max:51200',
+        'fichier_audio' => 'nullable|file|mimes:mp3,mpga,wav,ogg,m4a|max:102400',
         'statut' => 'required|in:brouillon,publie',
+    ];
+
+    protected $messages = [
+        'fichier_audio.required' => 'Veuillez selectionner un fichier audio.',
+        'fichier_audio.file' => 'Le fichier audio selectionne est invalide.',
+        'fichier_audio.mimes' => 'Le fichier audio doit etre au format mp3, wav, ogg ou m4a.',
+        'fichier_audio.max' => 'Le fichier audio ne doit pas depasser 100 Mo.',
+        'fichier_audio.uploaded' => 'Le fichier audio n\'a pas pu etre envoye. Verifiez la taille maximale autorisee par PHP et la connexion pendant l\'upload.',
     ];
 
     public function render()
@@ -62,7 +70,7 @@ class EmissionRadioMariaCrud extends Component
     public function addEmission()
     {
         $this->validate([
-            'fichier_audio' => 'required|file|mimes:mp3,wav,ogg,m4a|max:51200',
+            'fichier_audio' => 'required|file|mimes:mp3,mpga,wav,ogg,m4a|max:102400',
         ] + $this->rules);
 
         $filePath = $this->storeAudioFile();
