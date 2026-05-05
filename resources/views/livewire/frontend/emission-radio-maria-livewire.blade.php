@@ -33,7 +33,8 @@
 
             @if($latestEmission)
                 @php
-                    $latestShareDescription = \Illuminate\Support\Str::limit(strip_tags($latestEmission->description ?? ''), 130);
+                    $latestShareTitle = 'Emission Radio Maria - Date : '.optional($latestEmission->date_emission)->format('d/m/Y').' - Paroisse : '.($latestEmission->paroisse->designation ?? 'N/A');
+                    $latestShareDescription = \Illuminate\Support\Str::limit('Theme : '.$latestEmission->titre.'. '.strip_tags($latestEmission->description ?? ''), 160);
                     $latestAudioUrl = asset('storage/' . $latestEmission->fichier_audio);
                 @endphp
                 <div class="row align-items-center mb-5" id="emission-featured-{{ $latestEmission->id }}" wire:key="featured-emission-{{ $latestEmission->id }}-{{ md5($latestEmission->fichier_audio) }}">
@@ -65,7 +66,7 @@
                             </div>
                             @include('partials.social-share-buttons', [
                                 'shareUrl' => route('partage.radio-maria', ['emission' => $latestEmission->id]),
-                                'shareTitle' => $latestEmission->titre,
+                                'shareTitle' => $latestShareTitle,
                                 'shareDescription' => $latestShareDescription,
                             ])
                             @if($latestEmission->description)
@@ -126,7 +127,8 @@
             <div class="row">
                 @forelse($emissions as $emission)
                     @php
-                        $emissionShareDescription = \Illuminate\Support\Str::limit(strip_tags($emission->description ?? ''), 130);
+                        $emissionShareTitle = 'Emission Radio Maria - Date : '.optional($emission->date_emission)->format('d/m/Y').' - Paroisse : '.($emission->paroisse->designation ?? 'N/A');
+                        $emissionShareDescription = \Illuminate\Support\Str::limit('Theme : '.$emission->titre.'. '.strip_tags($emission->description ?? ''), 160);
                         $emissionAudioUrl = asset('storage/' . $emission->fichier_audio);
                     @endphp
                     <div class="col-lg-4 col-md-6" wire:key="emission-column-{{ $emission->id }}-{{ md5($emission->fichier_audio) }}">
@@ -157,7 +159,7 @@
                                 </div>
                                 @include('partials.social-share-buttons', [
                                     'shareUrl' => route('partage.radio-maria', ['emission' => $emission->id]),
-                                    'shareTitle' => $emission->titre,
+                                    'shareTitle' => $emissionShareTitle,
                                     'shareDescription' => $emissionShareDescription,
                                 ])
                                 @if($emission->description)

@@ -61,10 +61,14 @@ class FrontendShareController extends Controller
     {
         abort_unless($emission->statut === 'publie', 404);
 
-        $description = Str::limit(strip_tags($emission->description ?? ''), 160);
+        $date = optional($emission->date_emission)->format('d/m/Y');
+        $paroisse = $emission->paroisse->designation ?? 'N/A';
+        $title = 'Emission Radio Maria - Date : '.$date.' - Paroisse : '.$paroisse;
+        $theme = 'Theme : '.$emission->titre;
+        $description = Str::limit(trim($theme.'. '.strip_tags($emission->description ?? '')), 180);
 
         return view('frontend.share-preview', [
-            'title' => $emission->titre,
+            'title' => $title,
             'description' => $description ?: 'Emission Radio Maria partagee depuis la Croisade Eucharistique du Diocese de Goma.',
             'image' => asset('asset_frontend/images/logoce.png'),
             'url' => route('partage.radio-maria', ['emission' => $emission->id]),
