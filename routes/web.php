@@ -112,4 +112,5 @@ Route::get('/detail-activite/{slug}',Detailactivite::class)->name('detailactivit
 Route::get('/partage/galerie', [FrontendShareController::class, 'gallery'])->name('partage.galerie');
 Route::get('/partage/photo/{photo}', [FrontendShareController::class, 'photo'])->name('partage.photo');
 Route::get('/partage/ressource/{resource}', [FrontendShareController::class, 'resource'])->name('partage.ressource');
+Route::get('/partage/radio-maria/{emission}', [FrontendShareController::class, 'radioMaria'])->name('partage.radio-maria');
 

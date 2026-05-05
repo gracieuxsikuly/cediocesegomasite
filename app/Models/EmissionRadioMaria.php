@@ -13,10 +13,12 @@ class EmissionRadioMaria extends Model
         'paroisse_id',
         'fichier_audio',
         'statut',
+        'nombre_ecoutes',
     ];
 
     protected $casts = [
         'date_emission' => 'date',
+        'nombre_ecoutes' => 'integer',
     ];
 
     public function paroisse()

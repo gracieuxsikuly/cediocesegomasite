@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\PhotoVideo;
+use App\Models\EmissionRadioMaria;
 use App\Models\Ressource;
 use Illuminate\Support\Str;
 
@@ -53,6 +54,23 @@ class FrontendShareController extends Controller
             'type' => 'article',
             'fileUrl' => $resource->file ? asset('storage/' . $resource->file) : null,
             'fileFormat' => $resource->formatressource,
+        ]);
+    }
+
+    public function radioMaria(EmissionRadioMaria $emission)
+    {
+        abort_unless($emission->statut === 'publie', 404);
+
+        $description = Str::limit(strip_tags($emission->description ?? ''), 160);
+
+        return view('frontend.share-preview', [
+            'title' => $emission->titre,
+            'description' => $description ?: 'Emission Radio Maria partagee depuis la Croisade Eucharistique du Diocese de Goma.',
+            'image' => asset('asset_frontend/images/logoce.png'),
+            'url' => route('partage.radio-maria', ['emission' => $emission->id]),
+            'backUrl' => route('emissions.radio-maria.frontend', ['emission' => $emission->id]),
+            'backLabel' => 'Ecouter cette emission',
+            'type' => 'music.radio_station',
         ]);
     }
 

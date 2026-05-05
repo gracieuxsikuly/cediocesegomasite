@@ -14,20 +14,37 @@ class EmissionRadioMariaLivewire extends Component
     public $paroisseId = '';
     public $dateEmission = '';
     public $searchTerm = '';
+    public $emission = '';
+
+    protected $queryString = [
+        'emission' => ['except' => ''],
+    ];
 
     public function updatingParoisseId()
     {
+        $this->emission = '';
         $this->resetPage();
     }
 
     public function updatingDateEmission()
     {
+        $this->emission = '';
         $this->resetPage();
     }
 
     public function updatingSearchTerm()
     {
+        $this->emission = '';
         $this->resetPage();
+    }
+
+    public function recordListen($emissionId)
+    {
+        EmissionRadioMaria::whereKey($emissionId)
+            ->where('statut', 'publie')
+            ->increment('nombre_ecoutes');
+
+        $this->skipRender();
     }
 
     public function render()
@@ -51,9 +68,21 @@ class EmissionRadioMariaLivewire extends Component
             })
             ->orderByDesc('date_emission');
 
+        $selectedEmission = $this->emission
+            ? EmissionRadioMaria::with('paroisse.doyenne')
+                ->where('statut', 'publie')
+                ->find($this->emission)
+            : null;
+
         return view('livewire.frontend.emission-radio-maria-livewire', [
-            'latestEmission' => (clone $query)->first(),
+            'latestEmission' => $selectedEmission ?: (clone $query)->first(),
             'emissions' => $query->paginate(6),
+            'topEmissions' => EmissionRadioMaria::with('paroisse.doyenne')
+                ->where('statut', 'publie')
+                ->orderByDesc('nombre_ecoutes')
+                ->orderByDesc('date_emission')
+                ->take(3)
+                ->get(),
             'paroisses' => Paroisse::with('doyenne')->orderBy('designation')->get(),
         ])->layout('layouts.defaultfrontend', ['title' => 'Emissions Radio Maria']);
     }

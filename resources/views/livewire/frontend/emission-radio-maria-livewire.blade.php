@@ -32,7 +32,11 @@
             </div>
 
             @if($latestEmission)
-                <div class="row align-items-center mb-5">
+                @php
+                    $latestShareDescription = \Illuminate\Support\Str::limit(strip_tags($latestEmission->description ?? ''), 130);
+                    $latestAudioUrl = asset('storage/' . $latestEmission->fichier_audio);
+                @endphp
+                <div class="row align-items-center mb-5" id="emission-featured-{{ $latestEmission->id }}" wire:key="featured-emission-{{ $latestEmission->id }}-{{ md5($latestEmission->fichier_audio) }}">
                     <div class="col-lg-5">
                         <div class="mission-image">
                             <div class="mission-img">
@@ -56,17 +60,46 @@
                                     <li><i class="fa-solid fa-church"></i>Paroisse : <span>{{ $latestEmission->paroisse->designation ?? 'N/A' }}</span></li>
                                     <li><i class="fa-solid fa-location-dot"></i>Doyenne : <span>{{ $latestEmission->paroisse->doyenne->designation ?? 'N/A' }}</span></li>
                                     <li><i class="fa-regular fa-calendar-days"></i>Date : <span>{{ optional($latestEmission->date_emission)->format('d/m/Y') }}</span></li>
+                                    <li><i class="fa-solid fa-headphones"></i>Ecoutes : <span>{{ number_format($latestEmission->nombre_ecoutes ?? 0, 0, ',', ' ') }}</span></li>
                                 </ul>
                             </div>
+                            @include('partials.social-share-buttons', [
+                                'shareUrl' => route('partage.radio-maria', ['emission' => $latestEmission->id]),
+                                'shareTitle' => $latestEmission->titre,
+                                'shareDescription' => $latestShareDescription,
+                            ])
                             @if($latestEmission->description)
                                 <p>{{ $latestEmission->description }}</p>
                             @endif
-                            <audio controls class="w-100 mt-3">
-                                <source src="{{ asset('storage/' . $latestEmission->fichier_audio) }}">
+                            <audio controls class="w-100 mt-3" src="{{ $latestAudioUrl }}" wire:key="featured-audio-{{ $latestEmission->id }}-{{ md5($latestEmission->fichier_audio) }}" wire:play="recordListen({{ $latestEmission->id }})">
                                 Votre navigateur ne supporte pas la lecture audio.
                             </audio>
                         </div>
                     </div>
+                </div>
+            @endif
+
+            @if($topEmissions->isNotEmpty())
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <div class="section-title">
+                            <h3 class="wow fadeInUp">Les plus suivies</h3>
+                        </div>
+                    </div>
+                    @foreach($topEmissions as $topEmission)
+                        <div class="col-lg-4 col-md-6 mb-3">
+                            <div class="blog-item wow fadeInUp h-100">
+                                <div class="post-item-body">
+                                    <h2>{{ $topEmission->titre }}</h2>
+                                    <p><i class="fa-solid fa-headphones"></i> {{ number_format($topEmission->nombre_ecoutes ?? 0, 0, ',', ' ') }} ecoute(s)</p>
+                                    <p><i class="fa-regular fa-calendar-days"></i> {{ optional($topEmission->date_emission)->format('d/m/Y') }}</p>
+                                </div>
+                                <div class="post-item-footer">
+                                    <a href="{{ route('emissions.radio-maria.frontend', ['emission' => $topEmission->id]) }}" class="read-more-btn">Ecouter</a>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
             @endif
 
@@ -92,8 +125,12 @@
 
             <div class="row">
                 @forelse($emissions as $emission)
-                    <div class="col-lg-4 col-md-6">
-                        <div class="sermons-item wow fadeInUp">
+                    @php
+                        $emissionShareDescription = \Illuminate\Support\Str::limit(strip_tags($emission->description ?? ''), 130);
+                        $emissionAudioUrl = asset('storage/' . $emission->fichier_audio);
+                    @endphp
+                    <div class="col-lg-4 col-md-6" wire:key="emission-column-{{ $emission->id }}-{{ md5($emission->fichier_audio) }}">
+                        <div class="sermons-item wow fadeInUp" id="emission-{{ $emission->id }}">
                             <div class="sermons-image">
                                 <figure>
                                     <img src="{{ asset('asset_frontend/images/post-1.png') }}" alt="{{ $emission->titre }}">
@@ -103,7 +140,7 @@
                                     <p>{{ optional($emission->date_emission)->translatedFormat('M') }}</p>
                                 </div>
                                 <div class="sermons-audio-icon">
-                                    <a href="{{ asset('storage/' . $emission->fichier_audio) }}" target="_blank"><img src="{{ asset('asset_frontend/images/audio-play-icon.svg') }}" alt="Ecouter"></a>
+                                    <a href="{{ $emissionAudioUrl }}" target="_blank"><img src="{{ asset('asset_frontend/images/audio-play-icon.svg') }}" alt="Ecouter"></a>
                                 </div>
                             </div>
                             <div class="sermons-body">
@@ -115,13 +152,18 @@
                                         <li><i class="fa-solid fa-church"></i>Paroisse : <span>{{ $emission->paroisse->designation ?? 'N/A' }}</span></li>
                                         <li><i class="fa-solid fa-tag"></i>Doyenne : <span>{{ $emission->paroisse->doyenne->designation ?? 'N/A' }}</span></li>
                                         <li><i class="fa-regular fa-calendar-days"></i>Date : <span>{{ optional($emission->date_emission)->format('d/m/Y') }}</span></li>
+                                        <li><i class="fa-solid fa-headphones"></i>Ecoutes : <span>{{ number_format($emission->nombre_ecoutes ?? 0, 0, ',', ' ') }}</span></li>
                                     </ul>
                                 </div>
+                                @include('partials.social-share-buttons', [
+                                    'shareUrl' => route('partage.radio-maria', ['emission' => $emission->id]),
+                                    'shareTitle' => $emission->titre,
+                                    'shareDescription' => $emissionShareDescription,
+                                ])
                                 @if($emission->description)
                                     <p>{{ Str::limit($emission->description, 120) }}</p>
                                 @endif
-                                <audio controls class="w-100 mt-3">
-                                    <source src="{{ asset('storage/' . $emission->fichier_audio) }}">
+                                <audio controls class="w-100 mt-3" src="{{ $emissionAudioUrl }}" wire:key="emission-audio-{{ $emission->id }}-{{ md5($emission->fichier_audio) }}" wire:play="recordListen({{ $emission->id }})">
                                     Votre navigateur ne supporte pas la lecture audio.
                                 </audio>
                             </div>

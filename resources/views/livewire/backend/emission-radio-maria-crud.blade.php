@@ -41,6 +41,7 @@
                                         <th>Paroisse</th>
                                         <th>Doyenne</th>
                                         <th>Audio</th>
+                                        <th>Ecoutes</th>
                                         <th>Statut</th>
                                         <th>Actions</th>
                                     </tr>
@@ -69,6 +70,12 @@
                                             @endif
                                         </td>
                                         <td>
+                                            <span class="badge bg-info">
+                                                <i class="fas fa-headphones"></i>
+                                                {{ number_format($emission->nombre_ecoutes ?? 0, 0, ',', ' ') }}
+                                            </span>
+                                        </td>
+                                        <td>
                                             <span class="badge bg-{{ $emission->statut === 'publie' ? 'success' : 'secondary' }}">
                                                 {{ $emission->statut === 'publie' ? 'Publie' : 'Brouillon' }}
                                             </span>
@@ -88,7 +95,7 @@
                                     </tr>
                                     @empty
                                     <tr>
-                                        <td colspan="8" class="text-center">Aucune emission trouvee.</td>
+                                        <td colspan="9" class="text-center">Aucune emission trouvee.</td>
                                     </tr>
                                     @endforelse
                                 </tbody>
