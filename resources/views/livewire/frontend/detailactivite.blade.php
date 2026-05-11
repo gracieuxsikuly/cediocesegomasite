@@ -32,7 +32,9 @@
                                 <img src="{{ $activity->image1 ? asset('storage/' . $activity->image1) : asset('asset_frontend/images/post-1.png') }}" alt="{{ $activity->titre }}">
                             </figure>
                             @if($activity->dateactivite)
-                                @php($date = \Carbon\Carbon::parse($activity->dateactivite))
+                                @php
+                                    $date = \Carbon\Carbon::parse($activity->dateactivite);
+                                @endphp
                                 <div class="sermons-meta">
                                     <h3>{{ $date->format('d') }}</h3>
                                     <p>{{ $date->translatedFormat('F') }}</p>
