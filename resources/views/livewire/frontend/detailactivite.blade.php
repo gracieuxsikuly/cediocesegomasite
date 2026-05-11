@@ -48,16 +48,35 @@
                                 'shareTitle' => $activity->titre,
                                 'shareDescription' => $activityShareDescription,
                             ])
-                            <div class="sermons-list">
-                                <ul>
-                                    <li><i class="fa-solid fa-location-dot"></i>Lieu : <span>{{ $activity->emplacement ?? 'N/A' }}</span></li>
-                                    <li><i class="fa-solid fa-tag"></i>Categorie : <span>{{ $activity->typeactivite ?? 'N/A' }}</span></li>
-                                    <li><i class="fa-solid fa-church"></i>Paroisse : <span>{{ $activity->paroisse->designation ?? 'N/A' }}</span></li>
-                                    <li><i class="fa-solid fa-people-group"></i>Doyenne : <span>{{ $activity->doyenne->designation ?? 'N/A' }}</span></li>
-                                    @if($activity->dateactivite)
-                                        <li><i class="fa-regular fa-calendar-days"></i>Date : <span>{{ \Carbon\Carbon::parse($activity->dateactivite)->format('d/m/Y') }}</span></li>
-                                    @endif
-                                </ul>
+                            @php
+                                $additionalImages = collect(['image2', 'image3'])
+                                    ->filter(fn ($field) => filled($activity->{$field}));
+                            @endphp
+                            <div class="row g-4 align-items-start">
+                                <div class="{{ $additionalImages->isNotEmpty() ? 'col-lg-7' : 'col-12' }}">
+                                    <div class="sermons-list">
+                                        <ul>
+                                            <li><i class="fa-solid fa-location-dot"></i>Lieu : <span>{{ $activity->emplacement ?? 'N/A' }}</span></li>
+                                            <li><i class="fa-solid fa-tag"></i>Categorie : <span>{{ $activity->typeactivite ?? 'N/A' }}</span></li>
+                                            <li><i class="fa-solid fa-church"></i>Paroisse : <span>{{ $activity->paroisse->designation ?? 'N/A' }}</span></li>
+                                            <li><i class="fa-solid fa-people-group"></i>Doyenne : <span>{{ $activity->doyenne->designation ?? 'N/A' }}</span></li>
+                                            @if($activity->dateactivite)
+                                                <li><i class="fa-regular fa-calendar-days"></i>Date : <span>{{ \Carbon\Carbon::parse($activity->dateactivite)->format('d/m/Y') }}</span></li>
+                                            @endif
+                                        </ul>
+                                    </div>
+                                </div>
+                                @if($additionalImages->isNotEmpty())
+                                    <div class="col-lg-5">
+                                        <div class="activity-extra-gallery">
+                                            @foreach($additionalImages as $imageField)
+                                                <figure class="activity-extra-image mb-3">
+                                                    <img src="{{ asset('storage/' . $activity->{$imageField}) }}" alt="{{ $activity->titre }}">
+                                                </figure>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                @endif
                             </div>
                             <p style="text-align: justify;">{{ $activity->description }}</p>
                         </div>
@@ -84,18 +103,6 @@
                             <a href="{{ route('activites') }}" class="read-more-btn">Retour aux activites</a>
                         </div>
                     </div>
-
-                    @foreach(['image2', 'image3'] as $imageField)
-                        @if($activity->{$imageField})
-                            <div class="blog-item wow fadeInUp mt-4">
-                                <div class="post-featured-image">
-                                    <figure>
-                                        <img src="{{ asset('storage/' . $activity->{$imageField}) }}" alt="{{ $activity->titre }}">
-                                    </figure>
-                                </div>
-                            </div>
-                        @endif
-                    @endforeach
                 </div>
             </div>
         </div>

@@ -1895,6 +1895,26 @@ header.main-header .header-sticky.active{
 	margin-bottom: 0;
 }
 
+.activity-extra-gallery{
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 16px;
+}
+
+.activity-extra-image{
+	margin: 0;
+	border-radius: 0 0 40px 0;
+	overflow: hidden;
+	background: #f5f5f5;
+}
+
+.activity-extra-image img{
+	width: 100%;
+	aspect-ratio: 1 / 0.75;
+	object-fit: cover;
+	display: block;
+}
+
 .sermons-list ul li i{
 	font-size: 16px;
 	color: var(--accent-color);
@@ -4943,6 +4963,10 @@ header.main-header .header-sticky.active{
 	.sermons-body{
 		border-radius: 0 0 50px 0;
 		padding: 20px;
+	}
+
+	.activity-extra-gallery{
+		margin-top: 10px;
 	}
 
 	.sermons-list ul li{
