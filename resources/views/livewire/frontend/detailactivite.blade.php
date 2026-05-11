@@ -49,11 +49,12 @@
                                 'shareDescription' => $activityShareDescription,
                             ])
                             @php
-                                $additionalImages = collect(['image2', 'image3'])
-                                    ->filter(fn ($field) => filled($activity->{$field}));
+                                $actImg2 = $activity->image2 ?? null;
+                                $actImg3 = $activity->image3 ?? null;
+                                $hasExtraImages = $actImg2 || $actImg3;
                             @endphp
                             <div class="row g-4 align-items-start">
-                                <div class="{{ $additionalImages->isNotEmpty() ? 'col-lg-7' : 'col-12' }}">
+                                <div class="{{ $hasExtraImages ? 'col-lg-7' : 'col-12' }}">
                                     <div class="sermons-list">
                                         <ul>
                                             <li><i class="fa-solid fa-location-dot"></i>Lieu : <span>{{ $activity->emplacement ?? 'N/A' }}</span></li>
@@ -66,14 +67,19 @@
                                         </ul>
                                     </div>
                                 </div>
-                                @if($additionalImages->isNotEmpty())
+                                @if($hasExtraImages)
                                     <div class="col-lg-5">
                                         <div class="activity-extra-gallery">
-                                            @foreach($additionalImages as $imageField)
+                                            @if($actImg2)
                                                 <figure class="activity-extra-image mb-3">
-                                                    <img src="{{ asset('storage/' . $activity->{$imageField}) }}" alt="{{ $activity->titre }}">
+                                                    <img src="{{ asset('storage/' . $actImg2) }}" alt="{{ $activity->titre }}">
                                                 </figure>
-                                            @endforeach
+                                            @endif
+                                            @if($actImg3)
+                                                <figure class="activity-extra-image mb-3">
+                                                    <img src="{{ asset('storage/' . $actImg3) }}" alt="{{ $activity->titre }}">
+                                                </figure>
+                                            @endif
                                         </div>
                                     </div>
                                 @endif
